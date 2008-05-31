@@ -340,6 +340,20 @@
               <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresReportsTypeTaglet</tagletClass>
             </taglet>
           </taglets>
+          <tags>
+            <tag>
+              <name>plexus.component</name>
+              <placement>Xt</placement>
+            </tag>
+            <tag>
+              <name>plexus.configuration</name>
+              <placement>Xf</placement>
+            </tag>
+            <tag>
+              <name>plexus.requirement</name>
+              <placement>Xf</placement>
+            </tag>
+          </tags>
         </configuration>
       </plugin>
       <plugin>
