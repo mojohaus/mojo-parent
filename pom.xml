@@ -376,6 +376,9 @@
         <version>2.4</version>
         <configuration>
           <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+          <rulesets>
+            <ruleset>http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent/src/main/config/pmd/mojo_rules.xml</ruleset>
+          </rulesets>
         </configuration>
       </plugin>
       <plugin>
