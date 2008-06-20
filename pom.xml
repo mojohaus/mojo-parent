@@ -379,6 +379,12 @@
           <rulesets>
             <ruleset>http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent/src/main/config/pmd/mojo_rules.xml</ruleset>
           </rulesets>
+          <excludeRoots>
+            <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
+            <excludeRoot>${project.build.directory}/generated-sources/javacc</excludeRoot>
+            <excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
+            <excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
+          </excludeRoots>
         </configuration>
       </plugin>
       <plugin>
