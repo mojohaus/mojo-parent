@@ -272,7 +272,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.4</version>
+        <version>2.5</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
           <quiet>true</quiet>
@@ -297,78 +297,18 @@
             <link>http://maven.apache.org/ref/current/maven-reporting/maven-reporting-api/apidocs/</link>
             <link>http://maven.apache.org/ref/current/maven-settings/apidocs/</link>
           </links>
-          <tagletArtifact>
-            <groupId>org.apache.maven.plugin-tools</groupId>
-            <artifactId>maven-plugin-tools-javadoc</artifactId>
-            <version>2.4.1</version>
-          </tagletArtifact>
-          <taglets>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoAggregatorTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoComponentFieldTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoConfiguratorTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoExecuteTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoExecutionStrategyTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoGoalTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoInheritByDefaultTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoInstantiationStrategyTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoParameterFieldTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoPhaseTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoReadOnlyFieldTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiredFieldTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresDependencyResolutionTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresDirectInvocationTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresOnLineTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresProjectTypeTaglet</tagletClass>
-            </taglet>
-            <taglet>
-              <tagletClass>org.apache.maven.tools.plugin.javadoc.MojoRequiresReportsTypeTaglet</tagletClass>
-            </taglet>
-          </taglets>
-          <tags>
-            <tag>
-              <name>plexus.component</name>
-              <placement>Xt</placement>
-            </tag>
-            <tag>
-              <name>plexus.configuration</name>
-              <placement>Xf</placement>
-            </tag>
-            <tag>
-              <name>plexus.requirement</name>
-              <placement>Xf</placement>
-            </tag>
-          </tags>
+          <tagletArtifacts>
+            <tagletArtifact>
+              <groupId>org.apache.maven.plugin-tools</groupId>
+              <artifactId>maven-plugin-tools-javadoc</artifactId>
+              <version>2.4.2</version>
+            </tagletArtifact>
+            <tagletArtifact>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-javadoc</artifactId>
+              <version>1.0</version>
+            </tagletArtifact>
+          </tagletArtifacts>
         </configuration>
         <reportSets>
           <reportSet>
