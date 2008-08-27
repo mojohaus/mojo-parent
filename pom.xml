@@ -51,7 +51,7 @@
   <scm>
     <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
     <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
-    <url>http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</url>
+    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/mojo-parent</url>
   </scm>
   <issueManagement>
     <system>jira</system>
