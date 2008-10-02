@@ -16,6 +16,7 @@
   
   <rule ref="rulesets/basic.xml">
     <exclude name="EmptyCatchBlock"/>
+    <exclude name="CollapsibleIfStatements"/>
   </rule>
   <rule ref="rulesets/basic.xml/EmptyCatchBlock">
     <properties>
