@@ -66,7 +66,7 @@
     <snapshotRepository>
       <id>codehaus.org</id>
       <name>Mojo Central Development Repository</name>
-      <url>dav:https://dav.codehaus.org/snapshots.repository/mojo/</url>
+      <url>${mojoDistMgmtSnapshotsUrl}</url>
     </snapshotRepository>
     <site>
       <id>codehaus.org</id>
@@ -78,6 +78,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.java.target>1.4</project.build.java.target>
+    <mojoDistMgmtSnapshotsUrl>dav:https://dav.codehaus.org/snapshots.repository/mojo/</mojoDistMgmtSnapshotsUrl>
   </properties>
 
   <dependencyManagement>
