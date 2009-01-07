@@ -78,6 +78,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.java.target>1.4</project.build.java.target>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <mojoDistMgmtSnapshotsUrl>dav:https://dav.codehaus.org/snapshots.repository/mojo/</mojoDistMgmtSnapshotsUrl>
   </properties>
 
@@ -229,6 +230,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>2.0-beta-7</version>
+          <configuration>
+            <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -375,7 +379,7 @@
             <version>2.1</version>
             <configuration>
               <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
-              <outputEncoding>${project.build.sourceEncoding}</outputEncoding>
+              <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
             </configuration>
           </plugin>
           <plugin>
