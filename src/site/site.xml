@@ -10,6 +10,7 @@
     <href>http://codehaus.org/</href>
   </bannerRight>
   <publishDate format="yyyy-MM-dd" position="right" />
+  <version position="right" />
   <body>
     <breadcrumbs>
       <item name="Codehaus" href="http://codehaus.org/"/>
