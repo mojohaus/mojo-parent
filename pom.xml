@@ -226,17 +226,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>2.3</version>
-          <configuration>
-            <encoding>${project.build.sourceEncoding}</encoding>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>2.0</version>
-          <configuration>
-            <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
-          </configuration>
+          <version>2.0.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -322,7 +316,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.1</version>
+        <version>2.1.2</version>
         <reportSets>
           <reportSet>
             <reports>
@@ -366,7 +360,6 @@
             <artifactId>maven-javadoc-plugin</artifactId>
             <version>2.5</version>
             <configuration>
-              <encoding>${project.build.sourceEncoding}</encoding>
               <quiet>true</quiet>
               <links>
                 <link>http://java.sun.com/j2ee/1.4/docs/api</link>
@@ -425,7 +418,6 @@
             <artifactId>maven-pmd-plugin</artifactId>
             <version>2.4</version>
             <configuration>
-              <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
               <targetJdk>${project.build.java.target}</targetJdk>
               <rulesets>
                 <ruleset>http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent/src/main/config/pmd/mojo_rules.xml</ruleset>
@@ -441,7 +433,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>2.1</version>
+            <version>2.1.2</version>
             <reportSets>
               <reportSet>
                 <reports>
