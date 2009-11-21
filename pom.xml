@@ -281,12 +281,14 @@
                   <message>Mojo is syncronized with repo1.maven.org.  The rules for repo1.maven.org are that pom.xml files should not include repository definitions.  If repository definitions are included, they must be limited to SNAPSHOT only repositories.</message>
                   <banRepositories>true</banRepositories>
                   <banPluginRepositories>true</banPluginRepositories>
-                  <!-- allow the codehaus snapshot repos -->
+                  <!-- allow the codehaus and apache snapshot repos -->
                   <allowedRepositories>
                     <allowedRepository>codehaus.org</allowedRepository> 
+                    <allowedRepository>apache.snapshots</allowedRepository> 
                   </allowedRepositories>
                   <allowedPluginRepositories>
                     <allowedPluginRepository>codehaus.org</allowedPluginRepository> 
+                    <allowedPluginRepository>apache.snapshots</allowedPluginRepository> 
                   </allowedPluginRepositories>
                 </requireNoRepositories>
               </rules>
