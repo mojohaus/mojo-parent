@@ -507,7 +507,7 @@
             <configuration>
               <targetJdk>${project.build.java.target}</targetJdk>
               <rulesets>
-                <ruleset>http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent/src/main/config/pmd/mojo_rules.xml</ruleset>
+                <ruleset>http://svn.codehaus.org/mojo/tags/mojo-parent-22/src/main/config/pmd/mojo_rules.xml</ruleset>
               </rulesets>
               <excludeRoots>
                 <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
