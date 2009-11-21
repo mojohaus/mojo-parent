@@ -277,6 +277,18 @@
                   </excludes>
                   <message>The plexus-component-api conflicts with the plexus-container-default used by Maven. You probably added a dependency that is missing the exclusions.</message>
                 </bannedDependencies>
+                <requireNoRepositories>
+                  <message>Mojo is syncronized with repo1.maven.org.  The rules for repo1.maven.org are that pom.xml files should not include repository definitions.  If repository definitions are included, they must be limited to SNAPSHOT only repositories.</message>
+                  <banRepositories>true</banRepositories>
+                  <banPluginRepositories>true</banPluginRepositories>
+                  <!-- allow the codehaus snapshot repos -->
+                  <allowedRepositories>
+                    <allowedRepository>codehaus.org</allowedRepository> 
+                  </allowedRepositories>
+                  <allowedPluginRepositories>
+                    <allowedPluginRepository>codehaus.org</allowedPluginRepository> 
+                  </allowedPluginRepositories>
+                </requireNoRepositories>
               </rules>
             </configuration>
           </execution>
