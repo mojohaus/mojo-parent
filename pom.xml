@@ -293,6 +293,11 @@
                     <allowedPluginRepository>apache.snapshots</allowedPluginRepository> 
                   </allowedPluginRepositories>
                 </requireNoRepositories>
+                <requirePluginVersions>
+                   <message>Best Practice is to always define plugin versions!</message>
+                   <banLatest>true</banLatest>
+                   <banRelease>true</banRelease>
+                </requirePluginVersions>
               </rules>
             </configuration>
           </execution>
