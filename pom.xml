@@ -272,7 +272,7 @@
         <artifactId>maven-enforcer-plugin</artifactId>
         <executions>
           <execution>
-            <id>ensure-no-container-api</id>
+            <id>mojo-enforcer-rules</id>
             <phase>verify</phase>
             <goals>
               <goal>enforce</goal>
