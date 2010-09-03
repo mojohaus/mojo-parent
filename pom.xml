@@ -83,7 +83,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.build.java.target>1.4</project.build.java.target>
+    <mojo.java.target>1.4</mojo.java.target>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <mojoDistMgmtSnapshotsUrl>dav:https://dav.codehaus.org/snapshots.repository/mojo/</mojoDistMgmtSnapshotsUrl>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
@@ -168,8 +168,8 @@
           <version>2.2</version>
           <configuration>
             <encoding>${project.build.sourceEncoding}</encoding>
-            <source>${project.build.java.target}</source>
-            <target>${project.build.java.target}</target>
+            <source>${mojo.java.target}</source>
+            <target>${mojo.java.target}</target>
           </configuration>
         </plugin>
         <plugin>
@@ -337,7 +337,7 @@
             NOTE: Maven 2.x does not interpolate properties of the form project.*|pom.* so the Maven Plugin Plugin
             gets garbage when manually examining the config of the Maven Compiler Plugin.
             -->
-            <jdk>${project.build.java.target}</jdk>
+            <jdk>${mojo.java.target}</jdk>
           </requirements>
         </configuration>
       </plugin>
@@ -531,7 +531,7 @@
             <artifactId>maven-pmd-plugin</artifactId>
             <version>2.5</version>
             <configuration>
-              <targetJdk>${project.build.java.target}</targetJdk>
+              <targetJdk>${mojo.java.target}</targetJdk>
               <rulesets>
                 <ruleset>http://svn.codehaus.org/mojo/tags/mojo-parent-22/src/main/config/pmd/mojo_rules.xml</ruleset>
               </rulesets>
