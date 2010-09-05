@@ -503,8 +503,8 @@
                 </tagletArtifact>
                 <tagletArtifact>
                   <groupId>org.codehaus.plexus</groupId>
-                  <artifactId>plexus-javadoc</artifactId>
-                  <version>1.0</version>
+                  <artifactId>plexus-component-javadoc</artifactId>
+                  <version>1.5.4</version>
                 </tagletArtifact>
               </tagletArtifacts>
             </configuration>
