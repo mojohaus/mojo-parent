@@ -75,7 +75,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mojo.java.target>1.4</mojo.java.target>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <mojoDistMgmtSnapshotsUrl>dav:https://dav.codehaus.org/snapshots.repository/mojo/</mojoDistMgmtSnapshotsUrl>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
