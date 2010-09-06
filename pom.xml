@@ -64,16 +64,6 @@
     <url>http://jira.codehaus.org/browse/MOJO</url>
   </issueManagement>
   <distributionManagement>
-    <repository>
-      <id>codehaus.org</id>
-      <name>Mojo Central Repository</name>
-      <url>dav:https://dav.codehaus.org/repository/mojo/</url>
-    </repository>
-    <snapshotRepository>
-      <id>codehaus.org</id>
-      <name>Mojo Central Development Repository</name>
-      <url>${mojoDistMgmtSnapshotsUrl}</url>
-    </snapshotRepository>
     <site>
       <id>codehaus.org</id>
       <name>Mojo Website</name>
