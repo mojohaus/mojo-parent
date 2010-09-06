@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Mojo Ruleset"
+  xmlns="http://pmd.sf.net/ruleset/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+  xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  
+  <!-- 
+    Customized PMD ruleset for Mojo, see [0] for more information 
+    [0] http://pmd.sourceforge.net/howtomakearuleset.html
+  -->
+  
+  <description>
+    This ruleset checks the code for discouraged programming constructs.
+  </description>
+  
+  <rule ref="rulesets/basic.xml">
+    <exclude name="EmptyCatchBlock"/>
+    <exclude name="CollapsibleIfStatements"/>
+  </rule>
+  <rule ref="rulesets/basic.xml/EmptyCatchBlock">
+    <properties>
+      <property name="allowCommentedBlocks" value="true"/>
+    </properties>
+  </rule>
+
+  <rule ref="rulesets/unusedcode.xml"/>
+
+  <rule ref="rulesets/imports.xml"/>
+</ruleset>
