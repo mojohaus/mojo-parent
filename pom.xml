@@ -74,6 +74,10 @@
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MOJO</url>
   </issueManagement>
+  <ciManagement>
+    <system>hudson</system>
+    <url>https://grid.sonatype.org/ci/job/mojo/</url>
+  </ciManagement>
   <distributionManagement>
     <site>
       <id>codehaus.org</id>
