@@ -513,8 +513,8 @@
             <configuration>
               <quiet>true</quiet>
               <links>
-                <link>http://java.sun.com/j2ee/1.4/docs/api</link>
-                <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
+                <link>http://download-llnw.oracle.com/javaee/1.4/api/</link>
+                <link>http://download-llnw.oracle.com/javase/1.5.0/docs/api/</link>
                 <link>http://commons.apache.org/collections/apidocs-COLLECTIONS_3_0/</link>
                 <link>http://commons.apache.org/dbcp/apidocs/</link>
                 <link>http://commons.apache.org/fileupload/apidocs/</link>
