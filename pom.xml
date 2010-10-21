@@ -646,7 +646,7 @@
         </file>
       </activation>
       <properties>
-        <sitePluginVersion>3.0-beta-2</sitePluginVersion>
+        <sitePluginVersion>3.0-beta-3</sitePluginVersion>
       </properties>
       <build>
         <pluginManagement>
