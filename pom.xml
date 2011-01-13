@@ -74,10 +74,6 @@
     </mailingList>
   </mailingLists>
   
-  <prerequisites>
-    <maven>2.0</maven>
-  </prerequisites>
-
   <scm>
     <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
     <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
@@ -354,10 +350,6 @@
                    <banLatest>true</banLatest>
                    <banRelease>true</banRelease>
                 </requirePluginVersions>
-                <requireProperty>
-                  <property>project.prerequisites.maven</property>
-                  <message>The project must contain a prerequisite for Maven</message>
-                </requireProperty>
               </rules>
             </configuration>
           </execution>
