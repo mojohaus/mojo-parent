@@ -73,6 +73,10 @@
       </otherArchives>
     </mailingList>
   </mailingLists>
+  
+  <prerequisites>
+    <maven>2.0</maven>
+  </prerequisites>
 
   <scm>
     <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
@@ -97,6 +101,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <mojo.javadoc.mavenVersion>${project.prerequisites.maven}</mojo.javadoc.mavenVersion>
     <mojo.java.target>1.4</mojo.java.target>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
@@ -531,13 +536,13 @@
                 <link>http://logging.apache.org/log4j/1.2/apidocs/</link>
                 <link>http://jakarta.apache.org/regexp/apidocs/</link>
                 <link>http://velocity.apache.org/engine/releases/velocity-1.5/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-artifact/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-artifact-manager/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-model/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-plugin-api/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-project/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-reporting/maven-reporting-api/apidocs/</link>
-                <link>http://maven.apache.org/ref/current/maven-settings/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-artifact/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-artifact-manager/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-model/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-plugin-api/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-project/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-reporting/maven-reporting-api/apidocs/</link>
+                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-settings/apidocs/</link>
               </links>
               <tagletArtifacts>
                 <tagletArtifact>
