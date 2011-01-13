@@ -354,6 +354,10 @@
                    <banLatest>true</banLatest>
                    <banRelease>true</banRelease>
                 </requirePluginVersions>
+                <requireProperty>
+                  <property>project.prerequisites.maven</property>
+                  <message>The project must contain a prerequisite for Maven</message>
+                </requireProperty>
               </rules>
             </configuration>
           </execution>
