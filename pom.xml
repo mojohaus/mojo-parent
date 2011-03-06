@@ -72,6 +72,17 @@
         <otherArchive>http://markmail.org/list/org.codehaus.mojo.scm</otherArchive>
       </otherArchives>
     </mailingList>
+    <mailingList>
+      <name>Announcements List</name>
+      <subscribe>announce-subscribe@mojo.codehaus.org</subscribe>
+      <unsubscribe>announce-unsubscribe@mojo.codehaus.org</unsubscribe>
+      <post>announce@mojo.codehaus.org</post>
+      <archive>http://archive.codehaus.org/lists/org.codehaus.mojo.announce</archive>
+      <otherArchives>
+        <otherArchive>http://old.nabble.com/mojo---announce-f11982.html</otherArchive>
+        <otherArchive>http://markmail.org/list/org.codehaus.mojo.announce</otherArchive>
+      </otherArchives>
+    </mailingList>
   </mailingLists>
   
   <scm>
