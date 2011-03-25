@@ -133,22 +133,11 @@
     </dependencies>
   </dependencyManagement>
 
-  <repositories>
-    <repository>
-      <id>codehaus.org</id>
-      <name>Maven Central Development Repository</name>
-      <url>http://snapshots.repository.codehaus.org</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
-
   <pluginRepositories>
     <pluginRepository>
-      <id>codehaus.org</id>
-      <name>Maven Central Development Plugin Repository</name>
-      <url>http://snapshots.repository.codehaus.org</url>
+      <id>codehaus-snapshots</id>
+      <name>Codehaus Snapshots</name>
+      <url>http://nexus.codehaus.org/snapshots/</url>
       <releases>
         <enabled>false</enabled>
       </releases>
