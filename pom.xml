@@ -327,7 +327,7 @@
                   <banPluginRepositories>true</banPluginRepositories>
                   <allowSnapshotRepositories>true</allowSnapshotRepositories>
                   <allowedPluginRepositories>
-                    <allowedPluginRepository>codehaus.org</allowedPluginRepository> 
+                    <allowedPluginRepository>codehaus-snapshots</allowedPluginRepository> 
                     <allowedPluginRepository>apache.snapshots</allowedPluginRepository> 
                   </allowedPluginRepositories>
                 </requireNoRepositories>
