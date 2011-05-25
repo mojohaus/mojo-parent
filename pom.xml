@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.codehaus</groupId>
     <artifactId>codehaus-parent</artifactId>
-    <version>3</version>
+    <version>4</version>
   </parent>
 
   <groupId>org.codehaus.mojo</groupId>
@@ -305,7 +305,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.0</version>
         <executions>
           <execution>
             <id>mojo-enforcer-rules</id>
