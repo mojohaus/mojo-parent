@@ -95,8 +95,8 @@
     <url>http://jira.codehaus.org/browse/MOJO</url>
   </issueManagement>
   <ciManagement>
-    <system>hudson</system>
-    <url>https://grid.sonatype.org/ci/job/mojo/</url>
+    <system>bamboo</system>
+    <url>http://bamboo.ci.codehaus.org/browse/MOJO</url>
   </ciManagement>
   <distributionManagement>
     <site>
