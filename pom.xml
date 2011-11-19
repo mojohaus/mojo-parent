@@ -507,6 +507,13 @@
               <configLocation>config/maven_checks.xml</configLocation>
               <headerLocation>config/maven-header.txt</headerLocation>
             </configuration>
+            <reportSets>
+              <reportSet>
+                <reports>
+                  <report>checkstyle</report>
+                </reports>
+              </reportSet>
+            </reportSets>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
