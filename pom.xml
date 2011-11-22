@@ -30,7 +30,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>30-SNAPSHOT</version>
+  <version>29-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Codehaus Mojo Parent</name>
