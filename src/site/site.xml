@@ -37,6 +37,12 @@
     <version>1.0</version>
   </skin>
 
+  <custom>
+    <fluidoSkin>
+      <searchEnabled>true</searchEnabled>
+    </fluidoSkin>
+  </custom>
+
   <body>
     <links>
       <item name="Maven" href="http://maven.apache.org/"/>
