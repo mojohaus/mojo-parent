@@ -183,7 +183,6 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>2.3.2</version>
           <configuration>
-            <encoding>${project.build.sourceEncoding}</encoding>
             <source>${mojo.java.target}</source>
             <target>${mojo.java.target}</target>
           </configuration>
@@ -568,10 +567,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
             <version>2.3</version>
-            <configuration>
-              <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
-              <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
-            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
