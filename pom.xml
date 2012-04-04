@@ -30,7 +30,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>30</version>
+  <version>31-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Codehaus Mojo Parent</name>
@@ -86,9 +86,9 @@
   </mailingLists>
   
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/mojo/tags/mojo-parent-30</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/tags/mojo-parent-30</developerConnection>
-    <url>http://fisheye.codehaus.org/browse/mojo/tags/mojo-parent-30</url>
+    <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
+    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/mojo-parent</url>
   </scm>
   <issueManagement>
     <system>jira</system>
