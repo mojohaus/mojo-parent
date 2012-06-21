@@ -117,6 +117,18 @@
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
     <!-- m-site-p version : can not still use the version 3.0 (breaks some site) -->
     <sitePluginVersion>2.3</sitePluginVersion>
+
+    <!-- plugin version acting as plugin + report in alphabetical order (see MOJO-1851) -->
+    <checkstylePluginVersion>2.9.1</checkstylePluginVersion>
+    <coberturaPluginVersion>2.5.1</coberturaPluginVersion>
+    <invokerPluginVersion>1.5</invokerPluginVersion>
+    <javadocPluginVersion>2.8</javadocPluginVersion>
+    <jrxPluginVersion>2.3</jrxPluginVersion>
+    <pluginPluginVersion>2.9</pluginPluginVersion>
+    <pmdPluginVersion>2.7.1</pmdPluginVersion>
+    <surefirePluginVersion>2.9</surefirePluginVersion>
+    <taglistpluginVersion>2.4</taglistpluginVersion>
+
   </properties>
 
   <dependencyManagement>
@@ -171,7 +183,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.9.1</version>
+          <version>${checkstylePluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -199,13 +211,18 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>1.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
-          <version>1.5</version>
+          <version>${invokerPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -215,17 +232,17 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.8</version>
+          <version>${javadocPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
-          <version>2.3</version>
+          <version>${jrxPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>2.9</version>
+          <version>${pluginPluginVersion}</version>
           <executions>
             <execution>
               <id>help-mojo</id>
@@ -238,7 +255,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>2.7.1</version>
+          <version>${pmdPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -273,7 +290,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.9</version>
+          <version>${surefirePluginVersion}</version>
           <configuration>
             <redirectTestOutputToFile>${surefire.redirectTestOutputToFile}</redirectTestOutputToFile>
           </configuration>
@@ -281,7 +298,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.9</version>
+          <version>${surefirePluginVersion}</version>
         </plugin>
         <!-- Codehaus plugins in alphabetical order -->
         <plugin>
@@ -292,7 +309,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>${coberturaPluginVersion}</version>
         </plugin>
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
@@ -307,7 +324,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>taglist-maven-plugin</artifactId>
-          <version>2.4</version>
+          <version>${taglistpluginVersion}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -371,7 +388,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>2.9</version>
+        <version>${pluginPluginVersion}</version>
         <configuration>
           <requirements>
             <!--
@@ -475,7 +492,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.4</version>
             <executions>
                 <execution>
                     <id>sign-artifacts</id>
@@ -503,7 +519,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
-            <version>2.9.1</version>
+            <version>${checkstylePluginVersion}</version>
             <configuration>
               <configLocation>config/maven_checks.xml</configLocation>
               <headerLocation>config/maven-header.txt</headerLocation>
@@ -519,7 +535,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.8</version>
+            <version>${javadocPluginVersion}</version>
             <configuration>
               <quiet>true</quiet>
               <links>
@@ -545,7 +561,7 @@
                 <tagletArtifact>
                   <groupId>org.apache.maven.plugin-tools</groupId>
                   <artifactId>maven-plugin-tools-javadoc</artifactId>
-                  <version>2.8</version>
+                  <version>${pluginPluginVersion}</version>
                 </tagletArtifact>
                 <tagletArtifact>
                   <groupId>org.codehaus.plexus</groupId>
@@ -566,12 +582,12 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
-            <version>2.3</version>
+            <version>${jrxPluginVersion}</version>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
-            <version>2.7.1</version>
+            <version>${pmdPluginVersion}</version>
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
               <rulesets>
@@ -611,7 +627,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.9</version>
+            <version>${surefirePluginVersion}</version>
             <reportSets>
               <reportSet>
                 <reports>
@@ -624,7 +640,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.5.1</version>
+            <version>${coberturaPluginVersion}</version>
             <configuration>
               <instrumentation>
                 <excludes>
@@ -636,7 +652,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>taglist-maven-plugin</artifactId>
-            <version>2.4</version>
+            <version>${taglistpluginVersion}</version>
           </plugin>
         </plugins>
       </reporting>
