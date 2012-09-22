@@ -225,7 +225,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>2.9</version>
+          <version>3.1</version>
           <executions>
             <execution>
               <id>help-mojo</id>
@@ -371,7 +371,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>2.9</version>
+        <version>3.1</version>
         <configuration>
           <requirements>
             <!--
