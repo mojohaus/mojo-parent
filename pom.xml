@@ -524,7 +524,7 @@
             <configuration>
               <quiet>true</quiet>
               <links>
-                <link>http://download-llnw.oracle.com/javaee/1.4/api/</link>
+                <link>http://docs.oracle.com/javaee/1.4/api/</link>
                 <link>http://commons.apache.org/collections/apidocs-COLLECTIONS_3_0/</link>
                 <link>http://commons.apache.org/dbcp/apidocs/</link>
                 <link>http://commons.apache.org/fileupload/apidocs/</link>
