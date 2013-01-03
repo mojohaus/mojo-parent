@@ -116,7 +116,7 @@
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
     <!-- m-site-p version : can not still use the version 3.0 (breaks some site) -->
-    <sitePluginVersion>2.3</sitePluginVersion>
+    <sitePluginVersion>3.2</sitePluginVersion>
   </properties>
 
   <dependencyManagement>
