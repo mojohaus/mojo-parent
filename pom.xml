@@ -115,7 +115,7 @@
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
-    <!-- m-site-p version : can not still use the version 3.0 (breaks some site) -->
+    <!-- m-site-p version -->
     <sitePluginVersion>3.2</sitePluginVersion>
   </properties>
 
@@ -253,7 +253,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.4</version>
+          <version>2.3.2</version>
           <configuration>
             <tagBase>https://svn.codehaus.org/mojo/tags</tagBase>
             <useReleaseProfile>false</useReleaseProfile>
@@ -666,10 +666,6 @@
           <exists>${basedir}</exists>
         </file>
       </activation>
-      <properties>
-        <!-- MLICENSE-26 : maven-site-plugin 3.0 has some problem... -->
-        <sitePluginVersion>3.2</sitePluginVersion>
-      </properties>
       <build>
         <plugins>
           <!-- if releasing current pom with maven 3 site descriptor must be attached -->
