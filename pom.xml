@@ -109,7 +109,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mojo.javadoc.mavenVersion>${project.prerequisites.maven}</mojo.javadoc.mavenVersion>
-    <mojo.java.target>1.4</mojo.java.target>
+    <mojo.java.target>1.5</mojo.java.target>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
