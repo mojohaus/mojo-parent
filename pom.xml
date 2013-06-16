@@ -117,6 +117,7 @@
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
     <!-- m-site-p version -->
     <sitePluginVersion>3.3</sitePluginVersion>
+    <projectInfoReportsPluginVersion>2.7</projectInfoReportsPluginVersion>
   </properties>
 
   <dependencyManagement>
@@ -253,7 +254,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.6</version>
+          <version>${projectInfoReportsPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -405,7 +406,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.6</version>
+        <version>${projectInfoReportsPluginVersion}</version>
         <reportSets>
           <reportSet>
             <reports>
@@ -602,7 +603,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>2.6</version>
             <reportSets>
               <reportSet>
                 <reports>
