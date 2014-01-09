@@ -147,6 +147,10 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <prerequisites>
+    <maven>2.2.1</maven>
+  </prerequisites>
+
   <build>
     <extensions>
       <extension>
