@@ -85,6 +85,10 @@
     </mailingList>
   </mailingLists>
 
+  <prerequisites>
+    <maven>2.2.1</maven>
+  </prerequisites>
+
   <scm>
     <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
     <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
@@ -120,6 +124,17 @@
     <projectInfoReportsPluginVersion>2.7</projectInfoReportsPluginVersion>
   </properties>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>codehaus-snapshots</id>
+      <name>Codehaus Snapshots</name>
+      <url>http://nexus.codehaus.org/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -136,30 +151,7 @@
     </dependencies>
   </dependencyManagement>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>codehaus-snapshots</id>
-      <name>Codehaus Snapshots</name>
-      <url>http://nexus.codehaus.org/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-
-  <prerequisites>
-    <maven>2.2.1</maven>
-  </prerequisites>
-
   <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav-jackrabbit</artifactId>
-        <version>2.1</version>
-      </extension>
-    </extensions>
-
     <pluginManagement>
       <plugins>
         <!-- Apache plugins in alphabetical order -->
@@ -336,7 +328,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -388,6 +379,13 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>2.1</version>
+      </extension>
+    </extensions>
   </build>
 
   <reporting>
