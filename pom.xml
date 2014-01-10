@@ -30,7 +30,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>33-SNAPSHOT</version>
+  <version>33</version>
   <packaging>pom</packaging>
 
   <name>Codehaus Mojo Parent</name>
@@ -92,16 +92,15 @@
        It means two things:
         - To *use* this plugin,  you must use at least Maven version X. (only for plugins, not for dependencies).
         - To *build* this plugin, you must use at least Maven version X.
-        *use* <= *build*, so always specify the *use*-value here. Set the *build*-value with the requireMavenVersion Enforcer Rule if it is not the same.
-	-->
+        *use* <= *build*, so always specify the *use*-value here. Set the *build*-value with the requireMavenVersion Enforcer Rule if it is not the same. -->
   <prerequisites>
     <maven>2.2.1</maven>
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
-    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/mojo-parent</url>
+    <connection>scm:svn:http://svn.codehaus.org/mojo/tags/mojo-parent-33</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/tags/mojo-parent-33</developerConnection>
+    <url>http://fisheye.codehaus.org/browse/mojo/tags/mojo-parent-33</url>
   </scm>
   <issueManagement>
     <system>jira</system>
