@@ -363,7 +363,7 @@
                 <!-- prerequisite is NOT inherited, so must do this check. -->
                 <requirePrerequisite>
                   <message>Mojo projects needs at least Maven 2.2.1!</message>
-                  <mavenVersion>2.2.1</mavenVersion>
+                  <mavenVersion>[2.2.1,)</mavenVersion>
                 </requirePrerequisite>
               </rules>
             </configuration>
