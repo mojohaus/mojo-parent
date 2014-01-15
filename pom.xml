@@ -30,7 +30,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>34-SNAPSHOT</version>
+  <version>33-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Codehaus Mojo Parent</name>
@@ -369,10 +369,11 @@
                   <banRelease>true</banRelease>
                 </requirePluginVersions>
                 <!-- prerequisite is NOT inherited, so must do this check. -->
-                <requirePrerequisite>
+                <!-- We still don't want to force this -->
+                <!--requirePrerequisite>
                   <message>Mojo projects need at least Apache Maven 2.2.1!</message>
                   <mavenVersion>[2.2.1,)</mavenVersion>
-                </requirePrerequisite>
+                </requirePrerequisite-->
               </rules>
             </configuration>
           </execution>
