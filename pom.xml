@@ -46,10 +46,9 @@
       <subscribe>dev-subscribe@mojo.codehaus.org</subscribe>
       <unsubscribe>dev-unsubscribe@mojo.codehaus.org</unsubscribe>
       <post>dev@mojo.codehaus.org</post>
-      <archive>http://archive.codehaus.org/lists/org.codehaus.mojo.dev</archive>
+      <archive>http://markmail.org/list/org.codehaus.mojo.dev</archive>
       <otherArchives>
-        <otherArchive>http://old.nabble.com/mojo---dev-f11981.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.codehaus.mojo.dev</otherArchive>
+        <otherArchive>http://mojo.10943.n7.nabble.com/Developer-f3.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
@@ -57,30 +56,25 @@
       <subscribe>user-subscribe@mojo.codehaus.org</subscribe>
       <unsubscribe>user-unsubscribe@mojo.codehaus.org</unsubscribe>
       <post>user@mojo.codehaus.org</post>
-      <archive>http://archive.codehaus.org/lists/org.codehaus.mojo.user</archive>
+      <archive>http://markmail.org/list/org.codehaus.mojo.user</archive>
       <otherArchives>
-        <otherArchive>http://old.nabble.com/mojo---user-f11980.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.codehaus.mojo.user</otherArchive>
+        <otherArchive>http://mojo.10943.n7.nabble.com/User-f34162.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
       <name>Commits List</name>
       <subscribe>scm-subscribe@mojo.codehaus.org</subscribe>
       <unsubscribe>scm-unsubscribe@mojo.codehaus.org</unsubscribe>
-      <archive>http://archive.codehaus.org/lists/org.codehaus.mojo.scm</archive>
-      <otherArchives>
-        <otherArchive>http://markmail.org/list/org.codehaus.mojo.scm</otherArchive>
-      </otherArchives>
+      <archive>http://markmail.org/list/org.codehaus.mojo.scm</archive>
     </mailingList>
     <mailingList>
       <name>Announcements List</name>
       <subscribe>announce-subscribe@mojo.codehaus.org</subscribe>
       <unsubscribe>announce-unsubscribe@mojo.codehaus.org</unsubscribe>
       <post>announce@mojo.codehaus.org</post>
-      <archive>http://archive.codehaus.org/lists/org.codehaus.mojo.announce</archive>
+      <archive>http://markmail.org/list/org.codehaus.mojo.announce</archive>
       <otherArchives>
-        <otherArchive>http://old.nabble.com/mojo---announce-f11982.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.codehaus.mojo.announce</otherArchive>
+        <otherArchive>http://mojo.10943.n7.nabble.com/Announce-f38303.html</otherArchive>
       </otherArchives>
     </mailingList>
   </mailingLists>
