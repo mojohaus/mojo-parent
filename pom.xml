@@ -533,23 +533,7 @@
             <configuration>
               <quiet>true</quiet>
               <links>
-                <link>http://docs.oracle.com/javaee/1.4/api/</link>
-                <link>http://commons.apache.org/collections/apidocs-COLLECTIONS_3_0/</link>
-                <link>http://commons.apache.org/dbcp/apidocs/</link>
-                <link>http://commons.apache.org/fileupload/apidocs/</link>
-                <link>http://commons.apache.org/logging/apidocs/</link>
-                <link>http://commons.apache.org/pool/apidocs/</link>
                 <link>http://junit.sourceforge.net/javadoc/</link>
-                <link>http://logging.apache.org/log4j/1.2/apidocs/</link>
-                <link>http://jakarta.apache.org/regexp/apidocs/</link>
-                <link>http://velocity.apache.org/engine/releases/velocity-1.5/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-artifact/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-artifact-manager/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-model/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-plugin-api/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-project/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-reporting/maven-reporting-api/apidocs/</link>
-                <link>http://maven.apache.org/ref/${mojo.javadoc.mavenVersion}/maven-settings/apidocs/</link>
               </links>
               <tagletArtifacts>
                 <tagletArtifact>
