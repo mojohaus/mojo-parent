@@ -86,9 +86,9 @@
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
-    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/mojo-parent</url>
+    <connection>scm:svn:https://github.com/mojohaus/mojo-parent</connection>
+    <developerConnection>scm:svn:https://github.com/mojohaus/mojo-parent</developerConnection>
+    <url>https://github.com/mojohaus/mojo-parent</url>
   </scm>
   <issueManagement>
     <system>jira</system>
@@ -573,7 +573,7 @@
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
               <rulesets>
-                <ruleset>http://svn.codehaus.org/mojo/tags/mojo-parent-34/src/main/config/pmd/mojo_rules.xml</ruleset>
+                <ruleset>https://raw.githubusercontent.com/mojohaus/mojo-parent/098c71ef9215deef80a5ad18dff1d2c10ec38049/src/main/config/pmd/mojo_rules.xml</ruleset>
               </rulesets>
               <excludeRoots>
                 <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
