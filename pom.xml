@@ -33,11 +33,11 @@
   <version>35-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Codehaus Mojo Parent</name>
-  <url>http://mojo.codehaus.org</url>
+  <name>MojoHaus Parent</name>
+  <url>http://www.mojohaus.org</url>
   <organization>
-    <name>Codehaus</name>
-    <url>http://codehaus.org</url>
+    <name>MojoHaus</name>
+    <url>http://www.mojohaus.org</url>
   </organization>
 
   <mailingLists>
