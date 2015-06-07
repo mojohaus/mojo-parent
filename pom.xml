@@ -82,9 +82,9 @@
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/mojo-parent</developerConnection>
-    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/mojo-parent</url>
+    <connection>scm:git:https://github.com/mojohaus/mojo-parent</connection>
+    <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent</developerConnection>
+    <url>https://github.com/mojohaus/mojo-parent</url>
   </scm>
   <issueManagement>
     <system>jira</system>
