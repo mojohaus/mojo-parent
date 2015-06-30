@@ -569,7 +569,7 @@
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
               <rulesets>
-                <ruleset>http://svn.codehaus.org/mojo/tags/mojo-parent-34/src/main/config/pmd/mojo_rules.xml</ruleset>
+                <ruleset>https://raw.githubusercontent.com/mojohaus/mojo-parent/mojo-parent-34/src/main/config/pmd/mojo_rules.xml</ruleset>
               </rulesets>
               <excludeRoots>
                 <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
