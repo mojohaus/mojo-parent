@@ -90,15 +90,19 @@
     <system>github</system>
     <url>https://github.com/mojohaus/mojo-parent/issues</url>
   </issueManagement>
-  <ciManagement>
-    <system>bamboo</system>
-    <url>http://bamboo.ci.codehaus.org/browse/MOJO</url>
-  </ciManagement>
+
   <distributionManagement>
+    <repository>
+      <id>ossrh-staging</id>
+      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh-snapshots</id>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
     <site>
-      <id>codehaus.org</id>
-      <name>Mojo Website</name>
-      <url>dav:https://dav.codehaus.org/mojo/</url>
+      <id>github</id>
+      <url>scm:git:git@github.com:mojohaus/mojo-parent.git</url>
     </site>
   </distributionManagement>
 
@@ -112,17 +116,6 @@
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
   </properties>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>codehaus-snapshots</id>
-      <name>Codehaus Snapshots</name>
-      <url>http://nexus.codehaus.org/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
 
   <dependencyManagement>
     <dependencies>
@@ -158,7 +151,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.5.3</version>
+          <version>2.5.5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -168,7 +161,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>2.5</version>
+          <version>2.6.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -216,8 +209,18 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>2.6</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ear-plugin</artifactId>
+          <version>2.10.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.9.1</version>
+          <version>2.10.3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -245,9 +248,8 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>2.5.2</version>
           <configuration>
-            <tagBase>https://svn.codehaus.org/mojo/tags</tagBase>
             <useReleaseProfile>false</useReleaseProfile>
             <arguments>-Pmojo-release</arguments>
           </configuration>
@@ -369,13 +371,6 @@
         </executions>
       </plugin>
     </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav-jackrabbit</artifactId>
-        <version>2.7</version>
-      </extension>
-    </extensions>
   </build>
 
   <reporting>
@@ -384,7 +379,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.4</version>
         <configuration>
           <requirements>
             <!--
@@ -568,9 +563,6 @@
             <version>3.4</version>
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
-              <rulesets>
-                <ruleset>http://svn.codehaus.org/mojo/tags/mojo-parent-34/src/main/config/pmd/mojo_rules.xml</ruleset>
-              </rulesets>
               <excludeRoots>
                 <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
                 <excludeRoot>${project.build.directory}/generated-sources/javacc</excludeRoot>
