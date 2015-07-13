@@ -90,6 +90,10 @@
     <system>github</system>
     <url>https://github.com/mojohaus/mojo-parent/issues</url>
   </issueManagement>
+  <ciManagement>
+    <system>Travis</system>
+    <url>https://travis-ci.org/mojohaus/${project.artifactId}</url>
+  </ciManagement>
 
   <distributionManagement>
     <repository>

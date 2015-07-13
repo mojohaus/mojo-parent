@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+install: "mvn --show-version --errors --batch-mode validate dependency:go-offline"
+script: "mvn --show-version --errors --batch-mode clean verify site"
+cache:
+    directories:
+    - $HOME/.m2
+branches:
+    except:
+        - gh-pages
+notifications:
+    email:
+        - mfriedenhagen@apache.org
