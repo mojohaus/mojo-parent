@@ -74,8 +74,7 @@
       </otherArchives>
     </mailingList>
   </mailingLists>
-
-  <!-- This has NO effect on mojo-projects using this parent.
+<!-- This has NO effect on mojo-projects using this parent.
        This just mean that you need maven 2.2.1 to build the mojo-parent -->
   <prerequisites>
     <maven>2.2.1</maven>
@@ -94,7 +93,6 @@
     <system>Travis</system>
     <url>https://travis-ci.org/mojohaus/${project.artifactId}</url>
   </ciManagement>
-
   <distributionManagement>
     <repository>
       <id>ossrh-staging</id>
@@ -120,6 +118,22 @@
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>ossrh-snapshots</id>
+      <layout>default</layout>
+      <name>ossrh-snapshots</name>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <checksumPolicy>fail</checksumPolicy>
+        <enabled>true</enabled>
+      </snapshots>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>
