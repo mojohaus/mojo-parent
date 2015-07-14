@@ -82,7 +82,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/mojohaus/mojo-parent</connection>
-    <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com/mojohaus/mojo-parent</developerConnection>
     <url>https://github.com/mojohaus/mojo-parent</url>
   </scm>
   <issueManagement>
@@ -104,7 +104,7 @@
     </snapshotRepository>
     <site>
       <id>github</id>
-      <url>scm:git:git@github.com:mojohaus/mojo-parent.git</url>
+      <url>scm:git:ssh://git@github.com/mojohaus/mojo-parent.git</url>
     </site>
   </distributionManagement>
 
@@ -276,6 +276,14 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>2.7</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <version>1.1</version>
+          <configuration>
+            <scmBranch>gh-pages</scmBranch>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
