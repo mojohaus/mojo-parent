@@ -34,7 +34,8 @@
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
-  <url>http://www.mojohaus.org</url>
+  <description>Parent POM for all MojoHaus hosted Apache Maven plugins and components.</description>
+  <url>http://www.mojohaus.org/${project.artifactId}</url>
   <organization>
     <name>MojoHaus</name>
     <url>http://www.mojohaus.org</url>

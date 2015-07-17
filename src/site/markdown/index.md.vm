@@ -1,0 +1,53 @@
+Parent POM for all MojoHaus hosted Apache Maven plugins and components.
+
+Default License is Apache 2.0.
+
+Latest Travis-Build: [![Build Status](https://travis-ci.org/mojohaus/mojo-parent.svg?branch=master)](https://travis-ci.org/mojohaus/mojo-parent)
+
+Changelog
+---------
+http://www.mojohaus.org/mojo-parent/github-report.html
+
+How to use the POM
+------------------
+
+* for general information about using a parent pom take a look at http://maven.apache.org/guides/introduction/introduction-to-the-pom.html.
+* it boils down to define a parent element in your own POM:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>mojo-parent</artifactId>
+        <version>${project.version}</version>
+    </parent>
+    <groupId>sample-groupId</groupId>
+    <artifactId>sample-project</artifactId>
+    <version>1-SNAPSHOT</version>
+    [...]
+</project>
+```
+
+Latest releases
+---------------
+
+... may be found at [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.codehaus.mojo%22%20AND%20a%3A%22mojo-parent%22%20AND%20p%3A%22pom%22
+).
+
+Deploy site to github
+---------------------
+
+To deploy a site to github using [maven-scm-publish-plugin](http://maven.apache.org/plugins/maven-scm-publish-plugin/):
+
+* Add a new branch `gh-pages` [manually](https://help.github.com/articles/creating-project-pages-manually).
+* Add `src/site/resources/.nojekyll` [to add hidden files (e.g. for jacoco)](http://illegalstateexception.blogspot.de/2013/01/publishing-maven-site-having-jacoco.html) as well.
+* Then after a release do:
+
+```
+cd target/checkout
+mvn verify site site:stage scm-publish:publish-scm -Dscmpublish.content=target/staging/ARTIFACTID
+```
+
