@@ -1,7 +1,5 @@
 Parent POM for all MojoHaus hosted Apache Maven plugins and components.
 
-Default License is Apache 2.0.
-
 Latest Travis-Build: [![Build Status](https://travis-ci.org/mojohaus/mojo-parent.svg?branch=master)](https://travis-ci.org/mojohaus/mojo-parent)
 
 Changelog
