@@ -296,6 +296,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>1.1</version>
           <configuration>
+             <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
             <scmBranch>gh-pages</scmBranch>
           </configuration>
         </plugin>
