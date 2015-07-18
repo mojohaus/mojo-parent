@@ -386,7 +386,7 @@
                   <banPluginRepositories>true</banPluginRepositories>
                   <allowSnapshotRepositories>true</allowSnapshotRepositories>
                   <allowedPluginRepositories>
-                    <allowedPluginRepository>codehaus-snapshots</allowedPluginRepository>
+                    <allowedPluginRepository>ossrh-snapshots</allowedPluginRepository>
                     <allowedPluginRepository>apache.snapshots</allowedPluginRepository>
                   </allowedPluginRepositories>
                 </requireNoRepositories>
