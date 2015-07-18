@@ -34,6 +34,51 @@
     <name>MojoHaus</name>
     <url>http://www.mojohaus.org</url>
   </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>aheritier</id>
+      <name>Arnaud Heritier</name>
+      <url>https://github.com/aheritier</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
+      <id>Godin</id>
+      <name>Evgeny Mandrikov</name>
+      <url>https://github.com/Godin</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
+      <id>khmarbaise</id>
+      <name>Karl-Heinz Marbaise</name>
+      <url>https://github.com/khmarbaise</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
+      <id>lennartj</id>
+      <name>Lennart Jörelid</name>
+      <url>https://github.com/lennartj</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
+      <id>mfriedenhagen</id>
+      <name>Mirko Friedenhagen</name>
+      <url>https://github.com/mfriedenhagen</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+  </developers>
 
   <mailingLists>
     <mailingList>
