@@ -19,8 +19,7 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
   <bannerLeft>
     <name>MojoHaus</name>
-    <!-- need to use image url other than www.mojohaus.org, otherwise the artifactId is inserted -->
-    <src>https://raw.githubusercontent.com/mojohaus/mojohaus.github.io/site/src/site/resources/images/mojo_logo.png </src>
+    <src>http://www.mojohaus.org/images/mojo_logo.png</src>
     <href>http://www.mojohaus.org/</href>
   </bannerLeft>
 
