@@ -294,6 +294,7 @@
           <version>2.5.2</version>
           <configuration>
             <!-- do not deploy site but use instructions in README.md -->
+            <mavenExecutorId>forked-path</mavenExecutorId>
             <goals>deploy</goals>
             <useReleaseProfile>false</useReleaseProfile>
             <arguments>-Pmojo-release</arguments>
