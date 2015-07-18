@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>37-SNAPSHOT</version>
+  <version>36-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
