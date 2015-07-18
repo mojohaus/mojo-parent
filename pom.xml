@@ -204,6 +204,17 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-changes-plugin</artifactId>
+          <version>2.11</version>
+          <configuration>
+            <issueManagementSystems>
+              <issueManagementSystem>GitHub</issueManagementSystem>
+            </issueManagementSystems>
+            <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>2.10</version>
         </plugin>
