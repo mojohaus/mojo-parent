@@ -534,23 +534,6 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-changes-plugin</artifactId>
-        <version>${maven-changes-plugin.version}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>github-report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-        <configuration>
-          <includeOpenIssues>false</includeOpenIssues>
-          <onlyMilestoneIssues>true</onlyMilestoneIssues>
-          <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>2.7</version>
         <reportSets>
@@ -572,6 +555,39 @@
   </reporting>
 
   <profiles>
+    <profile>
+      <!--
+      On travis-ci, the API rate limit for github reports is sometimes exceeded,
+      so only render this when not run on travis.
+      -->
+      <id>mojo-disable-githubreport-on-travis</id>
+      <activation>
+        <property>
+          <name>!env.CONTINUOUS_INTEGRATION</name>
+        </property>
+      </activation>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-changes-plugin</artifactId>
+            <version>${maven-changes-plugin.version}</version>
+            <reportSets>
+              <reportSet>
+                <reports>
+                  <report>github-report</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+            <configuration>
+              <includeOpenIssues>false</includeOpenIssues>
+              <onlyMilestoneIssues>true</onlyMilestoneIssues>
+              <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+            </configuration>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
     <profile>
       <id>mojo-release</id>
       <build>
