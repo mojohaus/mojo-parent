@@ -560,7 +560,7 @@
       On travis-ci, the API rate limit for github reports is sometimes exceeded,
       so only render this when not run on travis.
       -->
-      <id>mojo-disable-githubreport-on-travis</id>
+      <id>mojo-enable-githubreport-when-not-on-travis</id>
       <activation>
         <property>
           <name>!env.CONTINUOUS_INTEGRATION</name>
