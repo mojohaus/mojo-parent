@@ -145,8 +145,8 @@
   </prerequisites>
 
   <scm>
-    <connection>scm:git:https://github.com/mojohaus/mojo-parent</connection>
-    <developerConnection>scm:git:ssh://git@github.com/mojohaus/mojo-parent</developerConnection>
+    <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/mojohaus/mojo-parent.git</developerConnection>
     <url>https://github.com/mojohaus/mojo-parent</url>
     <tag>HEAD</tag>
   </scm>
@@ -466,6 +466,36 @@
                   <version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
                   <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
                 </requireMavenVersion>
+                <requireProperty>
+                  <property>project.scm.developerConnection</property>
+                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  we need to allow stuff after .git.
+                  -->
+                  <regex>scm:git:ssh://git@github.com/.*\.git.*</regex>
+                  <regexMessage>
+                    ssh (scm:git:ssh://git@github.com/.*\.git) is the preferred protocol for project.scm.developerConnection, current value: ${project.scm.developerConnection}
+                  </regexMessage>
+                </requireProperty>
+                <requireProperty>
+                  <property>project.scm.connection</property>
+                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  we need to allow stuff after .git.
+                  -->
+                  <regex>scm:git:https://github.com/.*\.git.*</regex>
+                  <regexMessage>
+                    https (scm:git:https://github.com/.*\.git) is the preferred protocol for project.scm.connection, current value: ${project.scm.connection}
+                  </regexMessage>
+                </requireProperty>
+                <requireProperty>
+                  <property>project.scm.url</property>
+                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  we need to allow stuff after .git.
+                  -->
+                  <regex>https://github.com/.*</regex>
+                  <regexMessage>
+                    Use https://github.com/.* as project.scm.url, especially using the prefix scm:git here will lead to unbrowseable links during site generation, current value: ${project.scm.url}
+                  </regexMessage>
+                </requireProperty>
               </rules>
             </configuration>
           </execution>
