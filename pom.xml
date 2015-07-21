@@ -51,6 +51,20 @@
       <organizationUrl>https://github.com/mojohaus</organizationUrl>
     </developer>
     <developer>
+      <id>Batmat</id>
+      <name>Baptiste Mathus</name>
+      <url>https://github.com/Batmat</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
+      <id>davidkarlsen</id>
+      <name>David Karlsen</name>
+      <url>https://github.com/davidkarlsen</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
+    <developer>
       <id>Godin</id>
       <name>Evgeny Mandrikov</name>
       <url>https://github.com/Godin</url>
