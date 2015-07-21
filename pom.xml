@@ -184,6 +184,7 @@
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
     <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
     <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
+    <localCheckout>true</localCheckout>
   </properties>
 
   <repositories>
