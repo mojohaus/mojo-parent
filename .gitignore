@@ -262,3 +262,8 @@ target/
 */.hg/*
 .hgignore
 
+### Takari Maven Wrapper ###
+/mvnw.bat
+/mvnw
+/.mvn/
+
