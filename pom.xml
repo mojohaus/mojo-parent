@@ -248,6 +248,17 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>${maven-checkstyle-plugin.version}</version>
+          <configuration>
+            <configLocation>config/maven_checks.xml</configLocation>
+            <headerLocation>config/maven-header.txt</headerLocation>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.shared</groupId>
+              <artifactId>maven-shared-resources</artifactId>
+              <version>2</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -445,6 +456,15 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <!--
+        We need to define the invocation of the plugin here because
+        Maven does not pickup the dependencies of checkstyle during
+        run of `mvn site` otherwise, see #23.
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
