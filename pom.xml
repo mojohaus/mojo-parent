@@ -155,11 +155,11 @@
   </scm>
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/mojohaus/mojo-parent/issues</url>
+    <url>https://github.com/mojohaus/${project.artifactId}/issues</url>
   </issueManagement>
   <ciManagement>
     <system>travis</system>
-    <url>https://travis-ci.org/mojohaus/mojo-parent</url>
+    <url>https://travis-ci.org/mojohaus/${project.artifactId}</url>
   </ciManagement>
   <distributionManagement>
     <repository>
@@ -385,7 +385,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>1.1</version>
           <configuration>
-             <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
+            <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
             <scmBranch>gh-pages</scmBranch>
           </configuration>
         </plugin>
