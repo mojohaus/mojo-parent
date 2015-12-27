@@ -9,9 +9,9 @@ This is the parent pom for all [MojoHaus](http://www.mojohaus.org) Maven plugins
 * Make sure `gpg-agent` is running.
 * Execute `mvn -B release:prepare release:perform`
 
-For publishing the site do the following:
+For publishing the site, do the following (assuming mono-module project):
 
 ```
 cd target/checkout
-mvn verify site site:stage scm-publish:publish-scm
+mvn -Preporting verify site-deploy
 ```

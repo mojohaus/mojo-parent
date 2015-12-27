@@ -46,6 +46,6 @@ To deploy a site to github using [maven-scm-publish-plugin](http://maven.apache.
 
 ```
 cd target/checkout
-mvn verify site site:stage scm-publish:publish-scm -Dscmpublish.content=target/staging/ARTIFACTID
+mvn -Preporting verify site-deploy
 ```
 
