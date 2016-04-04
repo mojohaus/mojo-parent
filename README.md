@@ -13,5 +13,5 @@ For publishing the site, do the following (assuming mono-module project):
 
 ```
 cd target/checkout
-mvn -Preporting verify site-deploy
+mvn verify site site:stage scm-publish:publish-scm
 ```
