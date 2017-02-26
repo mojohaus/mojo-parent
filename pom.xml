@@ -510,7 +510,7 @@
                 </requirePluginVersions>
                 <requireMavenVersion>
                   <version>3.0.5</version>
-                  <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
+                  <message>You need at least Maven 3.0.5 to build MojoHaus projects. Maven 2.X is not supported anymore.</message>
                 </requireMavenVersion>
                 <requireProperty>
                   <property>project.scm.developerConnection</property>
