@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>41-SNAPSHOT</version>
+  <version>50-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -138,14 +138,6 @@
       </otherArchives>
     </mailingList>
   </mailingLists>
-  <!-- This has NO effect on mojo-projects using this parent.
-       This just mean that you need maven 3.0 to build the mojo-parent
-       However some of the plugins defined herein have a a prerequisite of
-       Maven 3.0, so better use at least Maven 3.0.5
-  -->
-  <prerequisites>
-    <maven>3.0</maven>
-  </prerequisites>
 
   <scm>
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
@@ -517,7 +509,7 @@
                   <banRelease>true</banRelease>
                 </requirePluginVersions>
                 <requireMavenVersion>
-                  <version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
+                  <version>3.0.5</version>
                   <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
                 </requireMavenVersion>
                 <requireProperty>
