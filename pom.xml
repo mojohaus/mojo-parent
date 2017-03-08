@@ -92,6 +92,13 @@
       <organization>MojoHaus</organization>
       <organizationUrl>https://github.com/mojohaus</organizationUrl>
     </developer>
+    <developer>
+      <id>andham</id>
+      <name>Anders Hammar</name>
+      <url>https://github.com/andham</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
   </developers>
 
   <mailingLists>
