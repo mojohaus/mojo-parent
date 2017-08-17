@@ -99,6 +99,13 @@
       <organization>MojoHaus</organization>
       <organizationUrl>https://github.com/mojohaus</organizationUrl>
     </developer>
+    <developer>
+      <id>olamy</id>
+      <name>Olivier Lamy</name>
+      <url>https://github.com/olamy</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>    
   </developers>
 
   <mailingLists>
@@ -163,11 +170,11 @@
   <distributionManagement>
     <repository>
       <id>ossrh-staging</id>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
       <id>ossrh-snapshots</id>
-      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <site>
       <id>github</id>
