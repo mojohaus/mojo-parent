@@ -733,7 +733,7 @@
             <configuration>
               <quiet>true</quiet>
               <links>
-                <link>http://junit-team.github.io/junit/javadoc/latest/</link>
+                <link>http://junit.org/junit4/javadoc/latest/</link>
               </links>
               <tagletArtifacts>
                 <tagletArtifact>
