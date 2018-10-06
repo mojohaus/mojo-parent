@@ -45,7 +45,7 @@
         <widget>thin-badge</widget>
       </ohloh>
       <gitHub>
-        <projectId>mojohaus/${this.artifactId}</projectId>
+        <projectId>mojohaus/${project.artifactId}</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>gray</ribbonColor>
       </gitHub>
