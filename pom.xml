@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>50</version>
+  <version>51-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -165,7 +165,7 @@
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mojohaus/mojo-parent.git</developerConnection>
     <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
-    <tag>mojo-parent-50</tag>
+    <tag>master</tag>
   </scm>
   <issueManagement>
     <system>github</system>
