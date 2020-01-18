@@ -2,7 +2,7 @@
 
 This is the parent pom for all [MojoHaus](https://www.mojohaus.org) Maven plugins and components.
  
-[![Maven Central](https://img.shields.io/maven-central/v/org.codehaus.mojo/mojo-parent.svg?label=Maven%20Central)](https://search.maven.org/#search%7Cga%7C1%7Cmojo-parent)
+[![Maven Central](https://img.shields.io/maven-central/v/org.codehaus.mojo/mojo-parent.svg?label=Maven%20Central)](https://search.maven.org/search?q=g%3Aorg.codehaus.mojo+AND+a%3Amojo-parent)
 [![Build Status](https://travis-ci.org/mojohaus/mojo-parent.svg?branch=master)](https://travis-ci.org/mojohaus/mojo-parent)
 
 ## Releasing
