@@ -2,10 +2,11 @@ language: java
 env:
   - MAVEN_VERSION=3.0.5
   - MAVEN_VERSION=3.3.9
-  - MAVEN_VERSION=3.5.2  
+  - MAVEN_VERSION=3.5.4
+  - MAVEN_VERSION=3.6.3
 jdk:
-  - openjdk7
   - openjdk8
+  - openjdk11
 install:
   - "mvn -N io.takari:maven:0.4.0:wrapper -Dmaven=${MAVEN_VERSION}"
   - "./mvnw --show-version --errors --batch-mode validate dependency:go-offline"
