@@ -29,10 +29,10 @@
 
   <name>MojoHaus Parent</name>
   <description>Parent POM for all MojoHaus hosted Apache Maven plugins and components.</description>
-  <url>http://www.mojohaus.org/${project.artifactId}</url>
+  <url>https://www.mojohaus.org/${project.artifactId}</url>
   <organization>
     <name>MojoHaus</name>
-    <url>http://www.mojohaus.org</url>
+    <url>https://www.mojohaus.org</url>
   </organization>
   <licenses>
     <license>
@@ -130,31 +130,31 @@
       <post>users@maven.apache.org</post>
       <archive>https://lists.apache.org/list.html?users@maven.apache.org</archive>
       <otherArchives>
-        <otherArchive>http://mail-archives.apache.org/mod_mbox/maven-users/</otherArchive>
+        <otherArchive>https://mail-archives.apache.org/mod_mbox/maven-users/</otherArchive>
         <otherArchive>http://maven.40175.n5.nabble.com/Maven-Users-f40176.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
       <name>Former (pre-2015-06) Development List</name>
-      <archive>http://markmail.org/list/org.codehaus.mojo.dev</archive>
+      <archive>https://markmail.org/list/org.codehaus.mojo.dev</archive>
       <otherArchives>
         <otherArchive>http://mojo.10943.n7.nabble.com/Developer-f3.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
       <name>Former (pre-2015-06) User List</name>
-      <archive>http://markmail.org/list/org.codehaus.mojo.user</archive>
+      <archive>https://markmail.org/list/org.codehaus.mojo.user</archive>
       <otherArchives>
         <otherArchive>http://mojo.10943.n7.nabble.com/User-f34162.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
       <name>Former (pre-2015-06) Commits List</name>
-      <archive>http://markmail.org/list/org.codehaus.mojo.scm</archive>
+      <archive>https://markmail.org/list/org.codehaus.mojo.scm</archive>
     </mailingList>
     <mailingList>
       <name>Former (pre-2015-06) Announcements List</name>
-      <archive>http://markmail.org/list/org.codehaus.mojo.announce</archive>
+      <archive>https://markmail.org/list/org.codehaus.mojo.announce</archive>
       <otherArchives>
         <otherArchive>http://mojo.10943.n7.nabble.com/Announce-f38303.html</otherArchive>
       </otherArchives>
@@ -219,7 +219,7 @@
         <checksumPolicy>fail</checksumPolicy>
         <enabled>true</enabled>
       </snapshots>
-      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
   </repositories>
 
@@ -736,7 +736,7 @@
             <configuration>
               <quiet>true</quiet>
               <links>
-                <link>http://junit.org/junit4/javadoc/latest/</link>
+                <link>https://junit.org/junit4/javadoc/latest/</link>
               </links>
               <tagletArtifacts>
                 <tagletArtifact>
