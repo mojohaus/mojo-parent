@@ -32,16 +32,15 @@ How to use the POM
 Latest releases
 ---------------
 
-... may be found at [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.codehaus.mojo%22%20AND%20a%3A%22mojo-parent%22%20AND%20p%3A%22pom%22
-).
+... may be found at [Maven Central](https://search.maven.org/search?q=g%3Aorg.codehaus.mojo%20AND%20a%3Amojo-parent%20AND%20p%3Apom).
 
 Deploy site to github
 ---------------------
 
-To deploy a site to github using [maven-scm-publish-plugin](http://maven.apache.org/plugins/maven-scm-publish-plugin/):
+To deploy a site to github using [maven-scm-publish-plugin](https://maven.apache.org/plugins/maven-scm-publish-plugin/):
 
 * Add a new branch `gh-pages` [manually](https://help.github.com/articles/creating-project-pages-manually).
-* Add `src/site/resources/.nojekyll` [to add hidden files (e.g. for jacoco)](http://illegalstateexception.blogspot.de/2013/01/publishing-maven-site-having-jacoco.html) as well.
+* Add `src/site/resources/.nojekyll` [to add hidden files (e.g. for jacoco)](https://illegalstateexception.blogspot.de/2013/01/publishing-maven-site-having-jacoco.html) as well.
 * Then after a release do:
 
 ```
