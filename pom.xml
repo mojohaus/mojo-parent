@@ -201,11 +201,12 @@
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
-    <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-    <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
+    <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
+    <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
     <localCheckout>true</localCheckout>
-    <maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>
-    <maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
+    <!-- Need to stay on 3.0.0 until MSHARED-854 is fixed -->
+    <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
+    <maven-project-info-reports-plugin.version>3.0.0</maven-project-info-reports-plugin.version>
     <project.build.outputTimestamp>2020-01-20T08:31:00Z</project.build.outputTimestamp>
   </properties>
 
@@ -280,7 +281,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -305,7 +306,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.10</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -315,12 +316,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>1.4</version>
+          <version>1.4.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-help-plugin</artifactId>
-          <version>2.2</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -335,7 +336,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
-          <version>2.0.0</version>
+          <version>3.2.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -345,12 +346,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.2.3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-ear-plugin</artifactId>
-          <version>2.10.1</version>
+          <version>3.0.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -360,7 +361,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
-          <version>2.5</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -395,12 +396,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.1</version>
+          <version>3.0.0</version>
           <configuration>
             <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
             <scmBranch>gh-pages</scmBranch>
@@ -419,7 +420,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.7</version>
+          <version>3.8.2</version>
           <configuration>
             <skipDeploy>true</skipDeploy><!-- don't deploy site with maven-site-plugin -->
           </configuration>
@@ -451,12 +452,12 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>animal-sniffer-maven-plugin</artifactId>
-          <version>1.15</version>
+          <version>1.18</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>flatten-maven-plugin</artifactId>
-          <version>1.0.0-beta-5</version>
+          <version>1.2.1</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -466,7 +467,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>1.9</version>
+          <version>2.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.plexus</groupId>
@@ -481,7 +482,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
-          <version>2.5</version>
+          <version>2.7</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -634,7 +635,7 @@
               <dependency>
                 <groupId>org.apache.apache.resources</groupId>
                 <artifactId>apache-source-release-assembly-descriptor</artifactId>
-                <version>1.0.4</version>
+                <version>1.0.6</version>
               </dependency>
             </dependencies>
             <executions>
@@ -719,10 +720,10 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
             <version>${maven-checkstyle-plugin.version}</version>
-            <configuration>
+            <!-- <configuration>
               <configLocation>config/maven_checks.xml</configLocation>
               <headerLocation>config/maven-header.txt</headerLocation>
-            </configuration>
+            </configuration> -->
             <reportSets>
               <reportSet>
                 <reports>
@@ -744,12 +745,12 @@
                 <tagletArtifact>
                   <groupId>org.apache.maven.plugin-tools</groupId>
                   <artifactId>maven-plugin-tools-javadoc</artifactId>
-                  <version>3.4</version>
+                  <version>3.5.2</version>
                 </tagletArtifact>
                 <tagletArtifact>
                   <groupId>org.codehaus.plexus</groupId>
                   <artifactId>plexus-component-javadoc</artifactId>
-                  <version>1.5.5</version>
+                  <version>1.7.1</version>
                 </tagletArtifact>
               </tagletArtifacts>
             </configuration>
@@ -765,12 +766,12 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
-            <version>2.5</version>
+            <version>3.0.0</version>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
-            <version>3.5</version>
+            <version>3.13.0</version>
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
               <excludeRoots>
@@ -788,19 +789,19 @@
             <reportSets>
               <reportSet>
                 <reports>
-                  <report>cim</report>
+                  <report>index</report>
+                  <report>ci-management</report>
                   <report>dependencies</report>
                   <report>dependency-convergence</report>
                   <report>dependency-info</report>
                   <report>dependency-management</report>
-                  <report>index</report>
-                  <report>issue-tracking</report>
-                  <report>license</report>
-                  <report>mailing-list</report>
+                  <report>issue-management</report>
+                  <report>licenses</report>
+                  <report>mailing-lists</report>
                   <report>plugin-management</report>
-                  <report>project-team</report>
                   <report>scm</report>
                   <report>summary</report>
+                  <report>team</report>
                 </reports>
               </reportSet>
             </reportSets>
