@@ -581,15 +581,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <configuration>
-          <requirements>
-            <!--
-            NOTE: Maven 2.x does not interpolate properties of the form project.*|pom.* so the Maven Plugin Plugin
-            gets garbage when manually examining the config of the Maven Compiler Plugin.
-            -->
-            <jdk>${mojo.java.target}</jdk>
-          </requirements>
-        </configuration>
       </plugin>
     </plugins>
   </reporting>
