@@ -736,18 +736,6 @@
               <links>
                 <link>https://junit.org/junit4/javadoc/latest/</link>
               </links>
-              <tagletArtifacts>
-                <tagletArtifact>
-                  <groupId>org.apache.maven.plugin-tools</groupId>
-                  <artifactId>maven-plugin-tools-javadoc</artifactId>
-                  <version>3.4</version>
-                </tagletArtifact>
-                <tagletArtifact>
-                  <groupId>org.codehaus.plexus</groupId>
-                  <artifactId>plexus-component-javadoc</artifactId>
-                  <version>1.5.5</version>
-                </tagletArtifact>
-              </tagletArtifacts>
             </configuration>
             <reportSets>
               <reportSet>
