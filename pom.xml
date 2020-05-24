@@ -204,7 +204,8 @@
     <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
     <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
     <localCheckout>true</localCheckout>
-    <maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>
+    <!-- Need to stay on 3.0.0 until https://issues.apache.org/jira/browse/MSHARED-854 is fixed -->
+    <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
     <project.build.outputTimestamp>2020-01-20T08:31:00Z</project.build.outputTimestamp>
   </properties>
