@@ -4,7 +4,8 @@ Latest Travis-Build: [![Build Status](https://travis-ci.org/mojohaus/mojo-parent
 
 Changelog
 ---------
-[GitHub report](github-report.html)
+
+[GitHub report](https://github.com/mojohaus/mojo-parent/releases/tag/${project.scm.tag})
 
 How to use the POM
 ------------------
