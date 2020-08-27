@@ -528,7 +528,7 @@
                 </requireMavenVersion>
                 <requireProperty>
                   <property>project.scm.developerConnection</property>
-                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
                   we need to allow stuff after .git.
                   -->
                   <regex>scm:git:ssh://git@github.com/.*\.git.*</regex>
@@ -538,7 +538,7 @@
                 </requireProperty>
                 <requireProperty>
                   <property>project.scm.connection</property>
-                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
                   we need to allow stuff after .git.
                   -->
                   <regex>scm:git:https://github.com/.*\.git.*</regex>
@@ -548,7 +548,7 @@
                 </requireProperty>
                 <requireProperty>
                   <property>project.scm.url</property>
-                  <!-- because Maven adds the artifactId to the the SCM-Url automatically for modules in a multimodule project,
+                  <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
                   we need to allow stuff after .git.
                   -->
                   <regex>https://github.com/.*</regex>
