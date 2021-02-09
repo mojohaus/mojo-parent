@@ -740,16 +740,18 @@
             <reportSets>
               <reportSet>
                 <reports>
+                  <report>ci-management</report>
                   <report>dependencies</report>
                   <report>dependency-convergence</report>
                   <report>dependency-info</report>
                   <report>dependency-management</report>
                   <report>index</report>
-                  <report>license</report>
-                  <report>mailing-list</report>
+                  <report>issue-management</report>
+                  <report>licenses</report>
+                  <report>mailing-lists</report>
                   <report>plugin-management</report>
-                  <report>project-team</report>
                   <report>scm</report>
+                  <report>team</report>
                   <report>summary</report>
                 </reports>
               </reportSet>
