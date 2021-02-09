@@ -174,8 +174,8 @@
     <url>https://github.com/mojohaus/${project.artifactId}/issues</url>
   </issueManagement>
   <ciManagement>
-    <system>travis</system>
-    <url>https://travis-ci.org/mojohaus/${project.artifactId}</url>
+    <system>ghactions</system>
+    <url>https://github.com/mojohaus/${project.artifactId}/actions</url>
   </ciManagement>
   <distributionManagement>
     <repository>
