@@ -745,7 +745,6 @@
                   <report>dependency-info</report>
                   <report>dependency-management</report>
                   <report>index</report>
-                  <report>license</report>
                   <report>mailing-list</report>
                   <report>plugin-management</report>
                   <report>project-team</report>
