@@ -740,7 +740,6 @@
             <reportSets>
               <reportSet>
                 <reports>
-                  <report>cim</report>
                   <report>dependencies</report>
                   <report>dependency-convergence</report>
                   <report>dependency-info</report>
