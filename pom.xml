@@ -207,6 +207,7 @@
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-project-info-reports-plugin.version>3.1.1</maven-project-info-reports-plugin.version>
     <project.build.outputTimestamp>2021-02-09T11:49:33Z</project.build.outputTimestamp>
+    <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
   </properties>
 
   <repositories>
@@ -393,7 +394,6 @@
           <configuration>
             <pubScmUrl>${project.scm.developerConnection}</pubScmUrl>
             <scmBranch>gh-pages</scmBranch>
-            <content>${project.reporting.outputDirectory}</content><!-- mono-module doesn't require site:stage -->
           </configuration>
           <executions>
             <execution>
