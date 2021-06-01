@@ -201,7 +201,7 @@
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
-    <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>3.3.0</maven-javadoc-plugin.version>
     <localCheckout>true</localCheckout>
     <!-- Need to stay on 3.0.0 until https://issues.apache.org/jira/browse/MSHARED-854 is fixed -->
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
