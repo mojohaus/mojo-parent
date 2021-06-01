@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>63</version>
+  <version>64-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -167,7 +167,7 @@
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mojohaus/mojo-parent.git</developerConnection>
     <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
-    <tag>mojo-parent-63</tag>
+    <tag>master</tag>
   </scm>
   <issueManagement>
     <system>github</system>
@@ -206,7 +206,7 @@
     <!-- Need to stay on 3.0.0 until https://issues.apache.org/jira/browse/MSHARED-854 is fixed -->
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
-    <project.build.outputTimestamp>2021-06-01T19:19:09Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2021-06-01T19:19:12Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
   </properties>
 
