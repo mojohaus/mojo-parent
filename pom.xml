@@ -196,6 +196,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mojo.javadoc.mavenVersion>${project.prerequisites.maven}</mojo.javadoc.mavenVersion>
     <mojo.java.target>1.7</mojo.java.target>
+    <maven.compiler.source>${mojo.java.target}</maven.compiler.source>
+    <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
     <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
@@ -287,10 +289,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.1</version>
-          <configuration>
-            <source>${mojo.java.target}</source>
-            <target>${mojo.java.target}</target>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
