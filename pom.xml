@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>64-SNAPSHOT</version>
+  <version>9999</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -210,6 +210,7 @@
     <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
     <project.build.outputTimestamp>2021-06-01T19:19:12Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
+    <junit5.version>5.7.1</junit5.version>
   </properties>
 
   <repositories>
@@ -240,6 +241,13 @@
         <artifactId>junit</artifactId>
         <version>4.13.2</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit5.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.maven.plugin-tools</groupId>
