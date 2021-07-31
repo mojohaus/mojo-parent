@@ -212,11 +212,12 @@
     <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
     <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
     <!-- Need to stay on 3.0.0 until https://issues.apache.org/jira/browse/MSHARED-854 is fixed -->
-    <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+    <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
     <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+    <maven-ear-plugin.version>3.2.0</maven-ear-plugin.version>
     <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
     <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
@@ -228,6 +229,7 @@
     <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
     <maven-plugin-plugin.version>3.6.1</maven-plugin-plugin.version>
     <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
+    <maven-pmd-plugin.version>3.14.0</maven-pmd-plugin.version>
     <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
     <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
     <maven-scm-publish-plugin.version>3.1.0</maven-scm-publish-plugin.version>
@@ -235,6 +237,7 @@
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-surefire-report-plugin.version>2.22.2</maven-surefire-report-plugin.version>
+    <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
     <plexus-component-metadata.version>2.1.0</plexus-component-metadata.version>
     <taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
@@ -283,7 +286,7 @@
         <groupId>org.apache.maven.plugin-tools</groupId>
         <artifactId>maven-plugin-annotations</artifactId>
         <!--must be same version of m-plugin-p -->
-        <version>3.6.1</version>
+        <version>${maven-plugin-plugin.version}</version>
       </dependency>      
     </dependencies>
   </dependencyManagement>
@@ -371,12 +374,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.3.1</version>
+          <version>${maven-war-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-ear-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>${maven-ear-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -766,12 +769,12 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
-            <version>3.1.1</version>
+            <version>${maven-jxr-plugin.version}</version>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
-            <version>3.14.0</version>
+            <version>${maven-pmd-plugin.version}</version>
             <configuration>
               <targetJdk>${mojo.java.target}</targetJdk>
               <excludeRoots>
@@ -809,7 +812,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.22.2</version>
+            <version>${maven-surefire-report-plugin.version}</version>
             <reportSets>
               <reportSet>
                 <reports>
@@ -822,7 +825,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>taglist-maven-plugin</artifactId>
-            <version>2.4</version>
+            <version>${taglist-maven-plugin.version}</version>
           </plugin>
         </plugins>
       </reporting>
