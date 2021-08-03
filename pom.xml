@@ -207,7 +207,7 @@
     <animal-sniffer-maven-plugin.version>1.20</animal-sniffer-maven-plugin.version>
     <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
     <l10n-maven-plugin.version>1.0-alpha-2</l10n-maven-plugin.version>
-    <license-maven-plugin.version>1.9</license-maven-plugin.version>
+    <license-maven-plugin.version>2.0.0</license-maven-plugin.version>
     <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
     <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
