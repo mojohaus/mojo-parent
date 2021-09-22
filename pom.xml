@@ -243,7 +243,7 @@
     <versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
     <project.build.outputTimestamp>2021-06-01T19:19:12Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
-    <junit5.version>5.8.0</junit5.version>
+    <junit5.version>5.8.1</junit5.version>
   </properties>
 
   <repositories>
