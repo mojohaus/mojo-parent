@@ -244,6 +244,7 @@
     <project.build.outputTimestamp>2021-11-25T10:17:48Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.8.1</junit5.version>
+    <checkstyle.version>8.42</checkstyle.version>
   </properties>
 
   <repositories>
@@ -318,6 +319,11 @@
               <groupId>org.apache.maven.shared</groupId>
               <artifactId>maven-shared-resources</artifactId>
               <version>4</version>
+            </dependency>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>${checkstyle.version}</version>
             </dependency>
           </dependencies>
         </plugin>
