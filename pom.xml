@@ -211,7 +211,6 @@
     <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
     <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
-    <!-- Need to stay on 3.0.0 until https://issues.apache.org/jira/browse/MSHARED-854 is fixed -->
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -228,8 +227,8 @@
     <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
     <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
     <maven-plugin-plugin.version>3.6.2</maven-plugin-plugin.version>
-    <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
     <maven-pmd-plugin.version>3.15.0</maven-pmd-plugin.version>
+    <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
     <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
     <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
     <maven-scm-publish-plugin.version>3.1.0</maven-scm-publish-plugin.version>
@@ -268,7 +267,7 @@
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-plugin-api</artifactId>
-        <version>3.8.4</version>
+        <version>3.2.5</version><!-- Minimum required Maven Version -->
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -568,8 +567,8 @@
                   <banRelease>true</banRelease>
                 </requirePluginVersions>
                 <requireMavenVersion>
-                  <version>3.0.5</version>
-                  <message>You need at least Maven 3.0.5 to build MojoHaus projects. Maven 2.X is not supported anymore.</message>
+                  <version>3.2.5</version>
+                  <message>You need at least Maven 3.2.5 to build MojoHaus projects.</message>
                 </requireMavenVersion>
                 <requireProperty>
                   <property>project.scm.developerConnection</property>
