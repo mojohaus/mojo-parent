@@ -1,2 +1,9 @@
 _extends: .github
-tag-template: mojo-parent-$NEXT_MINOR_VERSION
+# mojo-parent uses a single version number, no semantic versioning
+version-template: '$MAJOR'
+name-template: '$NEXT_MAJOR_VERSION'
+tag-template: 'mojo-parent-$NEXT_MAJOR_VERSION'
+template: |
+  ## Changes
+
+  $CHANGES
