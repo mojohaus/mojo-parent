@@ -240,7 +240,7 @@
     <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
-    <versions-maven-plugin.version>2.9.0</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.10.0</versions-maven-plugin.version>
     <project.build.outputTimestamp>2021-11-25T23:39:17Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.8.2</junit5.version>
