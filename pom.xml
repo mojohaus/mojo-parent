@@ -571,16 +571,6 @@
                   <message>You need at least Maven 3.2.5 to build MojoHaus projects.</message>
                 </requireMavenVersion>
                 <requireProperty>
-                  <property>project.scm.developerConnection</property>
-                  <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
-                  we need to allow stuff after .git.
-                  -->
-                  <regex>scm:git:ssh://git@github.com/.*\.git.*</regex>
-                  <regexMessage>
-                    ssh (scm:git:ssh://git@github.com/.*\.git) is the preferred protocol for project.scm.developerConnection, current value: ${project.scm.developerConnection}
-                  </regexMessage>
-                </requireProperty>
-                <requireProperty>
                   <property>project.scm.connection</property>
                   <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
                   we need to allow stuff after .git.
