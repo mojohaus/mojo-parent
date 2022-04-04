@@ -218,7 +218,7 @@
     <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
     <maven-ear-plugin.version>3.2.0</maven-ear-plugin.version>
     <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
-    <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+    <maven-failsafe-plugin.version>3.0.0-M6</maven-failsafe-plugin.version>
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
     <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
     <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
@@ -234,8 +234,8 @@
     <maven-scm-publish-plugin.version>3.1.0</maven-scm-publish-plugin.version>
     <maven-site-plugin.version>3.11.0</maven-site-plugin.version>
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-    <maven-surefire-report-plugin.version>2.22.2</maven-surefire-report-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
+    <maven-surefire-report-plugin.version>3.0.0-M6</maven-surefire-report-plugin.version>
     <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
@@ -622,18 +622,6 @@
   </reporting>
 
   <profiles>
-    <profile>
-      <!--
-      On travis-ci, the API rate limit for github reports is sometimes exceeded,
-      so only render this when not run on travis.
-      -->
-      <id>mojo-enable-githubreport-when-not-on-travis</id>
-      <activation>
-        <property>
-          <name>!env.CONTINUOUS_INTEGRATION</name>
-        </property>
-      </activation>
-    </profile>
     <profile>
       <id>mojo-release</id>
       <build>
