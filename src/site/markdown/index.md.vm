@@ -1,6 +1,6 @@
 Parent POM for all MojoHaus hosted Apache Maven plugins and components.
 
-Latest Travis-Build: [![Build Status](https://travis-ci.org/mojohaus/mojo-parent.svg?branch=master)](https://travis-ci.org/mojohaus/mojo-parent)
+Latest build status: [![GitHub CI](https://github.com/mojohaus/mojo-parent/actions/workflows/maven.yml/badge.svg)](https://github.com/mojohaus/mojo-parent/actions/workflows/maven.yml)
 
 Changelog
 ---------
