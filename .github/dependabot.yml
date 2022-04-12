@@ -4,6 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      # Checkstyle >=10 requires Java 11+
+      - dependency-name: "com.puppycrawl.tools:checkstyle"
+        versions: [">= 10.0"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
