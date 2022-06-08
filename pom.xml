@@ -409,10 +409,9 @@
           <version>${maven-release-plugin.version}</version>
           <configuration>
             <!-- do not deploy site but use instructions in README.md -->
-            <mavenExecutorId>forked-path</mavenExecutorId>
             <goals>deploy</goals>
-            <useReleaseProfile>false</useReleaseProfile>
             <arguments>-Pmojo-release</arguments>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
         </plugin>
         <plugin>
