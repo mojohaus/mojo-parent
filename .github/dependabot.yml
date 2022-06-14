@@ -5,6 +5,8 @@ updates:
     schedule:
       interval: "daily"
     ignore:
+      # Ignore Maven Core updates
+      - dependency-name: "org.apache.maven:*"
       # Checkstyle >=10 requires Java 11+
       - dependency-name: "com.puppycrawl.tools:checkstyle"
         versions: [">= 10.0"]
