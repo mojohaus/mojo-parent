@@ -129,10 +129,6 @@
       <unsubscribe>mailto:users-unsubscribe@maven.apache.org</unsubscribe>
       <post>mailto:users@maven.apache.org</post>
       <archive>https://lists.apache.org/list.html?users@maven.apache.org</archive>
-      <otherArchives>
-        <otherArchive>https://www.mail-archive.com/users@maven.apache.org/</otherArchive>
-        <otherArchive>https://maven-users.markmail.org/</otherArchive>
-      </otherArchives>
     </mailingList>
     <mailingList>
       <name>Former (pre-2015-06) Development List</name>
@@ -159,11 +155,11 @@
     <tag>master</tag>
   </scm>
   <issueManagement>
-    <system>github</system>
+    <system>GitHub</system>
     <url>https://github.com/mojohaus/${project.artifactId}/issues</url>
   </issueManagement>
   <ciManagement>
-    <system>ghactions</system>
+    <system>GitHub</system>
     <url>https://github.com/mojohaus/${project.artifactId}/actions</url>
   </ciManagement>
   <distributionManagement>
@@ -807,10 +803,13 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
             <version>${maven-surefire-report-plugin.version}</version>
+            <configuration>
+              <alwaysGenerateSurefireReport>false</alwaysGenerateSurefireReport>
+            </configuration>
             <reportSets>
               <reportSet>
                 <reports>
-                  <report>report</report>
+                  <report>report-only</report>
                 </reports>
               </reportSet>
             </reportSets>
