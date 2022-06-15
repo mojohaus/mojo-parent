@@ -46,9 +46,6 @@
       </options>
     </matomo>
     <fluidoSkin>
-      <googleSearch>
-        <sitesearch>www.mojohaus.org</sitesearch>
-      </googleSearch>
       <gitHub>
         <projectId>mojohaus/${project.artifactId}</projectId>
         <ribbonOrientation>right</ribbonOrientation>
@@ -65,6 +62,7 @@
       <item name="MojoHaus" href="https://www.mojohaus.org/"/>
       <item name="${this.name}" href="${this.url}" />
     </breadcrumbs>
+
     <menu ref="reports" inherit="bottom" />
   </body>
 </project>
