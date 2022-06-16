@@ -112,7 +112,14 @@
       <url>https://github.com/olamy</url>
       <organization>MojoHaus</organization>
       <organizationUrl>https://github.com/mojohaus</organizationUrl>
-    </developer>    
+    </developer>
+    <developer>
+      <id>sjaranowski</id>
+      <name>Slawomir Jaranowski</name>
+      <url>https://github.com/slawekjaranowski</url>
+      <organization>MojoHaus</organization>
+      <organizationUrl>https://github.com/mojohaus</organizationUrl>
+    </developer>
   </developers>
 
   <mailingLists>
@@ -627,7 +634,6 @@
                   <descriptorRefs>
                     <descriptorRef>source-release</descriptorRef>
                   </descriptorRefs>
-                  <tarLongFileFormat>gnu</tarLongFileFormat>
                 </configuration>
               </execution>
             </executions>
