@@ -22,13 +22,7 @@ on: [push, pull_request]
 jobs:
   build:
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        java: [11]
-      fail-fast: false
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -37,9 +31,42 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: ${{ matrix.java }}
-          distribution: 'microsoft'
+          java-version: 8
+          distribution: 'temurin'
           cache: 'maven'
 
       - name: Build with Maven
-        run: mvn verify -e -B -V -P run-its javadoc:javadoc
+        run: mvn -e -B -V verify site
+
+  deploy:
+    needs: build
+
+    if: |
+      github.event_name == 'push' && 
+      github.repository_owner == 'mojohaus' && 
+      github.ref == 'refs/heads/master' &&
+      !startsWith(github.event.head_commit.message , '[maven-release-plugin] prepare release')
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: 'maven'
+          server-id: ossrh-snapshots
+          server-username: MAVEN_DEPLOY_UID
+          server-password: MAVEN_DEPLOY_PWD
+
+      - name: Publish Snapshot
+        run: mvn -e -B -V deploy
+        env:
+          MAVEN_DEPLOY_UID: ${{ secrets.MAVEN_DEPLOY_UID }}
+          MAVEN_DEPLOY_PWD: ${{ secrets.MAVEN_DEPLOY_PWD }}
+
+
