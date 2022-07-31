@@ -238,6 +238,7 @@
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.9.0</junit5.version>
     <checkstyle.version>9.3</checkstyle.version><!-- 10.x requires Java 11 -->
+    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
   </properties>
 
   <repositories>
@@ -476,6 +477,11 @@
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>${maven-surefire-report-plugin.version}</version>
         </plugin>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>${nexus-staging-maven-plugin.version}</version>
+        </plugin>
         <!-- Codehaus plugins in alphabetical order -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -603,6 +609,16 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh-staging</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
       </plugin>
     </plugins>
   </build>
