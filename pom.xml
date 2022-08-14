@@ -305,14 +305,36 @@
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>${maven-checkstyle-plugin.version}</version>
           <configuration>
+            <sourceDirectories>
+              <sourceDirectory>src/main/java</sourceDirectory>
+            </sourceDirectories>
+            <testSourceDirectories>
+              <testSourceDirectory>src/test/java</testSourceDirectory>
+            </testSourceDirectories>
+            <includeTestSourceDirectory>true</includeTestSourceDirectory>
             <configLocation>config/maven_checks.xml</configLocation>
-            <headerLocation>config/maven-header.txt</headerLocation>
+            <!-- by default don't check headers -->
+            <headerLocation>mojohaus/config/checkstyle/empty-header.txt</headerLocation>
           </configuration>
+          <executions>
+            <execution>
+              <phase>validate</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.shared</groupId>
               <artifactId>maven-shared-resources</artifactId>
               <version>4</version>
+            </dependency>
+            <dependency>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>mojo-parent</artifactId>
+              <version>70-SNAPSHOT</version>
+              <classifier>config</classifier>
             </dependency>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
@@ -525,16 +547,8 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
-      <!--
-        We need to define the invocation of the plugin here because
-        Maven does not pickup the dependencies of checkstyle during
-        run of `mvn site` otherwise, see #23.
-      -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -606,6 +620,24 @@
             <id>attach-descriptor</id>
             <goals>
               <goal>attach-descriptor</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <inherited>false</inherited>
+        <configuration>
+          <descriptors>
+            <descriptor>config-assembly.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
             </goals>
           </execution>
         </executions>
@@ -737,10 +769,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
             <version>${maven-checkstyle-plugin.version}</version>
-            <configuration>
-              <configLocation>config/maven_checks.xml</configLocation>
-              <headerLocation>config/maven-header.txt</headerLocation>
-            </configuration>
             <reportSets>
               <reportSet>
                 <reports>
