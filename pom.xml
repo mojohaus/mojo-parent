@@ -24,7 +24,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>70-SNAPSHOT</version>
+  <version>70</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -159,7 +159,7 @@
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent.git</developerConnection>
     <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
-    <tag>master</tag>
+    <tag>mojo-parent-70</tag>
   </scm>
   <issueManagement>
     <system>GitHub</system>
@@ -235,7 +235,7 @@
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.11.0</versions-maven-plugin.version>
-    <project.build.outputTimestamp>2022-07-07T19:17:35Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-08-15T12:35:38Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.9.0</junit5.version>
     <checkstyle.version>9.3</checkstyle.version><!-- 10.x requires Java 11 -->
@@ -333,7 +333,7 @@
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>mojo-parent</artifactId>
-              <version>70-SNAPSHOT</version>
+              <version>70</version>
               <classifier>config</classifier>
             </dependency>
             <dependency>
