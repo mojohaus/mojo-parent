@@ -40,33 +40,7 @@ jobs:
 
   deploy:
     needs: build
-
-    if: |
-      github.event_name == 'push' && 
-      github.repository_owner == 'mojohaus' && 
-      github.ref == 'refs/heads/master' &&
-      !startsWith(github.event.head_commit.message , '[maven-release-plugin] prepare release')
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: '8'
-          distribution: 'temurin'
-          cache: 'maven'
-          server-id: ossrh-snapshots
-          server-username: MAVEN_DEPLOY_UID
-          server-password: MAVEN_DEPLOY_PWD
-
-      - name: Publish Snapshot
-        run: mvn -e -B -V deploy
-        env:
-          MAVEN_DEPLOY_UID: ${{ secrets.MAVEN_DEPLOY_UID }}
-          MAVEN_DEPLOY_PWD: ${{ secrets.MAVEN_DEPLOY_PWD }}
+    uses: mojohaus/.github/.github/workflows/maven-deploy.yml
+    secrets: inherit
 
 
