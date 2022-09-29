@@ -40,7 +40,7 @@ jobs:
 
   deploy:
     needs: build
-    uses: mojohaus/.github/.github/workflows/maven-deploy.yml
+    uses: mojohaus/.github/.github/workflows/maven-deploy.yml@master
     secrets: inherit
 
 
