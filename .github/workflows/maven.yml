@@ -21,7 +21,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -39,6 +39,7 @@ jobs:
         run: mvn -e -B -V verify site
 
   deploy:
+    name: Deploy
     needs: build
     uses: mojohaus/.github/.github/workflows/maven-deploy.yml@master
     secrets: inherit
