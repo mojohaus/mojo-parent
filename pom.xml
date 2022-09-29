@@ -237,7 +237,7 @@
     <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
     <project.build.outputTimestamp>2022-08-15T12:36:07Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
-    <junit5.version>5.9.0</junit5.version>
+    <junit5.version>5.9.1</junit5.version>
     <checkstyle.version>9.3</checkstyle.version><!-- 10.x requires Java 11 -->
   </properties>
 
