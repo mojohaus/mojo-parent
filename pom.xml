@@ -443,6 +443,7 @@
             <goals>deploy</goals>
             <arguments>-Pmojo-release</arguments>
             <autoVersionSubmodules>true</autoVersionSubmodules>
+            <tagNameFormat>@{project.version}</tagNameFormat>
           </configuration>
         </plugin>
         <plugin>
