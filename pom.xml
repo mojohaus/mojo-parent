@@ -628,18 +628,19 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <inherited>false</inherited>
-        <configuration>
-          <descriptors>
-            <descriptor>config-assembly.xml</descriptor>
-          </descriptors>
-        </configuration>
         <executions>
           <execution>
+            <id>assembly-configuration</id>
+            <inherited>false</inherited>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>config-assembly.xml</descriptor>
+              </descriptors>
+            </configuration>
           </execution>
         </executions>
       </plugin>
