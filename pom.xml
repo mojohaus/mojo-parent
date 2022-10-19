@@ -410,6 +410,10 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${maven-javadoc-plugin.version}</version>
+          <configuration>
+            <quiet>true</quiet>
+            <locale>en</locale>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -755,17 +759,10 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
             <version>${maven-javadoc-plugin.version}</version>
-            <configuration>
-              <quiet>true</quiet>
-              <links>
-                <link>https://junit.org/junit4/javadoc/latest/</link>
-              </links>
-            </configuration>
             <reportSets>
               <reportSet>
                 <reports>
                   <report>javadoc-no-fork</report>
-                  <report>test-javadoc-no-fork</report>
                 </reports>
               </reportSet>
             </reportSets>
