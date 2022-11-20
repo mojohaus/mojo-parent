@@ -233,6 +233,7 @@
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
+    <sisu-maven-plugin.version>0.9.0.M1</sisu-maven-plugin.version>
     <project.build.outputTimestamp>2022-10-20T18:24:12Z</project.build.outputTimestamp>
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.9.1</junit5.version>
@@ -552,6 +553,20 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
           <version>${versions-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.sisu</groupId>
+          <artifactId>sisu-maven-plugin</artifactId>
+          <version>${sisu-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>generate-index</id>
+              <goals>
+                <goal>main-index</goal>
+                <goal>test-index</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
