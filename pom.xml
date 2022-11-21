@@ -784,20 +784,6 @@
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-pmd-plugin</artifactId>
-            <version>${maven-pmd-plugin.version}</version>
-            <configuration>
-              <targetJdk>${mojo.java.target}</targetJdk>
-              <excludeRoots>
-                <excludeRoot>${project.build.directory}/generated-sources/antlr</excludeRoot>
-                <excludeRoot>${project.build.directory}/generated-sources/javacc</excludeRoot>
-                <excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
-                <excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
-              </excludeRoots>
-            </configuration>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
             <version>${maven-project-info-reports-plugin.version}</version>
             <reportSets>
