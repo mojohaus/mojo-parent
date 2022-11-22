@@ -326,7 +326,7 @@
             <dependency>
               <groupId>org.apache.maven.shared</groupId>
               <artifactId>maven-shared-resources</artifactId>
-              <version>4</version>
+              <version>5</version>
             </dependency>
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
