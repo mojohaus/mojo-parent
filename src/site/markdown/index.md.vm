@@ -30,6 +30,43 @@ How to use the POM
 </project>
 ```
 
+Spotless - automatic code formatting
+------------------------------------
+
+`MojoHaus` Parent POM contains configuration for [spotless-maven-plugin](https://github.com/diffplug/spotless/tree/main/plugin-maven)
+with options:
+
+ - [palantir](https://github.com/palantir/palantir-java-format) code formatter
+ - imports order as:
+   - javax
+   - java
+   - other imports
+   - static import
+
+In order to use `sspotless` in your project, you should add to your pom.xml `build/plugins`:
+
+```xml
+<plugin>
+  <groupId>com.diffplug.spotless</groupId>
+  <artifactId>spotless-maven-plugin</artifactId>
+</plugin>
+```
+
+When `spotless` will be enabled, each build will be check according to correct code format.
+
+To fix code, simply run:
+```
+mvn spotless:apply
+```
+
+After applying bigger reformatting it is recommended to add or update a `.git-blame-ignore-revs` file 
+in the root of the repository containing a line with the SHA1 of the formatting commit to ignore those changes 
+when using `git blame` (or equivalent concepts).
+
+This is automatically considered by [GitHub](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#bypassing-git-blame-ignore-revs-in-the-blame-view)
+and can optionally be considered with [local `git blame`](https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt)
+
+
 Latest releases
 ---------------
 
