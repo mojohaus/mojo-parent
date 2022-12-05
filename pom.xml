@@ -243,6 +243,8 @@
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
     <junit5.version>5.9.1</junit5.version>
     <checkstyle.version>9.3</checkstyle.version><!-- 10.x requires Java 11 -->
+    <!-- configuration for checkstyle to use with spotless -->
+    <checkstyle.spotless.config>config/maven_checks_nocodestyle.xml</checkstyle.spotless.config>
   </properties>
 
   <repositories>
@@ -322,7 +324,7 @@
           </configuration>
           <executions>
             <execution>
-              <phase>validate</phase>
+              <phase>process-sources</phase>
               <goals>
                 <goal>check</goal>
               </goals>

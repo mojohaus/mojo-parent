@@ -13,7 +13,7 @@ How to use the POM
 * for general information about using a parent pom take a look at http://maven.apache.org/guides/introduction/introduction-to-the-pom.html.
 * it boils down to define a parent element in your own POM:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -43,7 +43,7 @@ with options:
    - other imports
    - static import
 
-In order to use `sspotless` in your project, you should add to your pom.xml `build/plugins`:
+In order to use `spotless` in your project, you should add to your pom.xml `build/plugins`:
 
 ```xml
 <plugin>
@@ -58,6 +58,36 @@ To fix code, simply run:
 ```
 mvn spotless:apply
 ```
+
+Checkstyle
+----------
+
+You can use `checkstyle` in order to verify code on each build.
+
+Checkstyle can be enabled by adding to build/plugins`:
+
+```xml
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-checkstyle-plugin</artifactId>
+</plugin>
+```
+
+When you want to use `checkstyle` together with `spotless`, please add:
+
+```xml
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-checkstyle-plugin</artifactId>
+   <configuration>
+      <configLocation>${checkstyle.spotless.config}</configLocation>
+   </configuration>
+</plugin>
+```
+
+
+Big code reformat
+-----------------
 
 After applying bigger reformatting it is recommended to add or update a `.git-blame-ignore-revs` file 
 in the root of the repository containing a line with the SHA1 of the formatting commit to ignore those changes 
