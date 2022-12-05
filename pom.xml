@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements.  See the NOTICE file
@@ -18,7 +17,6 @@
   specific language governing permissions and limitations
   under the License.
 -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -158,8 +156,8 @@
   <scm>
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent.git</developerConnection>
-    <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
     <tag>master</tag>
+    <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
   </scm>
   <issueManagement>
     <system>GitHub</system>
@@ -169,6 +167,7 @@
     <system>GitHub</system>
     <url>https://github.com/mojohaus/${project.artifactId}/actions</url>
   </ciManagement>
+
   <distributionManagement>
     <repository>
       <id>ossrh-staging</id>
@@ -240,35 +239,22 @@
     <sisu-maven-plugin.version>0.9.0.M1</sisu-maven-plugin.version>
     <spotless-maven-plugin.version>2.28.0</spotless-maven-plugin.version>
     <project.build.outputTimestamp>2022-10-20T18:24:12Z</project.build.outputTimestamp>
-    <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content><!-- mono-module doesn't require site:stage for scm-publish -->
+    <!-- mono-module doesn't require site:stage for scm-publish -->
+    <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
     <junit5.version>5.9.1</junit5.version>
-    <checkstyle.version>9.3</checkstyle.version><!-- 10.x requires Java 11 -->
+    <!-- 10.x requires Java 11 -->
+    <checkstyle.version>9.3</checkstyle.version>
     <!-- configuration for checkstyle to use with spotless -->
     <checkstyle.spotless.config>config/maven_checks_nocodestyle.xml</checkstyle.spotless.config>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>ossrh-snapshots</id>
-      <layout>default</layout>
-      <name>ossrh-snapshots</name>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <checksumPolicy>fail</checksumPolicy>
-        <enabled>true</enabled>
-      </snapshots>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-  </repositories>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-plugin-api</artifactId>
-        <version>3.2.5</version><!-- Minimum required Maven Version -->
+        <!-- Minimum required Maven Version -->
+        <version>3.2.5</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -288,9 +274,25 @@
         <artifactId>maven-plugin-annotations</artifactId>
         <!--must be same version of m-plugin-p -->
         <version>${maven-plugin-plugin.version}</version>
-      </dependency>      
+      </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>ossrh-snapshots</id>
+      <name>ossrh-snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
 
   <build>
     <pluginManagement>
@@ -322,14 +324,6 @@
             <!-- by default don't check headers -->
             <headerLocation>mojohaus/config/checkstyle/empty-header.txt</headerLocation>
           </configuration>
-          <executions>
-            <execution>
-              <phase>process-sources</phase>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.shared</groupId>
@@ -348,6 +342,14 @@
               <version>${checkstyle.version}</version>
             </dependency>
           </dependencies>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <phase>process-sources</phase>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -477,19 +479,21 @@
           <executions>
             <execution>
               <id>scm-publish</id>
-              <phase>site-deploy</phase><!-- deploy site with maven-scm-publish-plugin -->
               <goals>
                 <goal>publish-scm</goal>
               </goals>
+              <!-- deploy site with maven-scm-publish-plugin -->
+              <phase>site-deploy</phase>
             </execution>
-         </executions>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${maven-site-plugin.version}</version>
           <configuration>
-            <skipDeploy>true</skipDeploy><!-- don't deploy site with maven-site-plugin -->
+            <!-- don't deploy site with maven-site-plugin -->
+            <skipDeploy>true</skipDeploy>
           </configuration>
         </plugin>
         <plugin>
@@ -618,10 +622,10 @@
         <executions>
           <execution>
             <id>mojo-enforcer-rules</id>
-            <phase>validate</phase>
             <goals>
               <goal>enforce</goal>
             </goals>
+            <phase>validate</phase>
             <configuration>
               <rules>
                 <bannedDependencies>
@@ -658,9 +662,7 @@
                   we need to allow stuff after .git.
                   -->
                   <regex>scm:git:https://github.com/.*\.git.*</regex>
-                  <regexMessage>
-                    https (scm:git:https://github.com/.*\.git) is the preferred protocol for project.scm.connection, current value: ${project.scm.connection}
-                  </regexMessage>
+                  <regexMessage>https (scm:git:https://github.com/.*\.git) is the preferred protocol for project.scm.connection, current value: ${project.scm.connection}</regexMessage>
                 </requireProperty>
                 <requireProperty>
                   <property>project.scm.url</property>
@@ -668,14 +670,18 @@
                   we need to allow stuff after .git.
                   -->
                   <regex>https://github.com/.*</regex>
-                  <regexMessage>
-                    Use https://github.com/.* as project.scm.url, especially using the prefix scm:git here will lead to unbrowseable links during site generation, current value: ${project.scm.url}
-                  </regexMessage>
+                  <regexMessage>Use https://github.com/.* as project.scm.url, especially using the prefix scm:git here will lead to unbrowseable links during site generation, current value: ${project.scm.url}</regexMessage>
                 </requireProperty>
               </rules>
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <!-- only in parent, other projects must enable it by itself -->
+        <inherited>false</inherited>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -696,11 +702,11 @@
         <executions>
           <execution>
             <id>assembly-configuration</id>
-            <inherited>false</inherited>
-            <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
+            <phase>package</phase>
+            <inherited>false</inherited>
             <configuration>
               <descriptors>
                 <descriptor>config-assembly.xml</descriptor>
@@ -730,10 +736,10 @@
             <executions>
               <execution>
                 <id>attach-source-release-distro</id>
-                <phase>package</phase>
                 <goals>
                   <goal>single</goal>
                 </goals>
+                <phase>package</phase>
                 <configuration>
                   <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
                   <descriptorRefs>
@@ -783,10 +789,10 @@
             <executions>
               <execution>
                 <id>sign-artifacts</id>
-                <phase>verify</phase>
                 <goals>
                   <goal>sign</goal>
                 </goals>
+                <phase>verify</phase>
               </execution>
             </executions>
           </plugin>
