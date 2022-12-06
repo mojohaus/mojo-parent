@@ -587,8 +587,8 @@
             <java>
               <!-- orders of used formatters are important -->
               <!-- eg. palantir override importOrder, so should be first -->
-              <palantirJavaFormat/>
-              <removeUnusedImports/>
+              <palantirJavaFormat />
+              <removeUnusedImports />
               <importOrder>
                 <order>javax,java,,\#</order>
               </importOrder>
@@ -596,6 +596,8 @@
             <pom>
               <sortPom>
                 <expandEmptyElements>false</expandEmptyElements>
+                <!-- https://issues.apache.org/jira/browse/MRELEASE-1111 -->
+                <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
               </sortPom>
             </pom>
             <upToDateChecking>
