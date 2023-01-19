@@ -186,11 +186,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <mojo.java.target>1.8</mojo.java.target>
+    <mojo.java.target>8</mojo.java.target>
     <maven.compiler.source>${mojo.java.target}</maven.compiler.source>
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
 
-    <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
+    <!-- as expected by Enforcer -->
+    <minimalJavaBuildVersion>1.8</minimalJavaBuildVersion>
     <minimalMavenBuildVersion>3.2.5</minimalMavenBuildVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
