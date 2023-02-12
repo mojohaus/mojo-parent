@@ -723,6 +723,11 @@
   <profiles>
     <profile>
       <id>mojo-release</id>
+      <properties>
+        <!-- due to m-deploy-p 3.x we need use Maven 3.9.x at least -->
+        <!-- https://issues.apache.org/jira/browse/MNG-7055 -->
+        <minimalMavenBuildVersion>3.9.0</minimalMavenBuildVersion>
+      </properties>
       <build>
         <plugins>
           <plugin>
