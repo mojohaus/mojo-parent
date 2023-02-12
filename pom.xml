@@ -278,22 +278,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-      <id>ossrh-snapshots</id>
-      <name>ossrh-snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -855,5 +839,32 @@
         </plugins>
       </reporting>
     </profile>
+
+    <profile>
+      <!-- workaround for https://github.com/dependabot/dependabot-core/issues/5947 -->
+      <id>snapshot-repo-workaround</id>
+      <activation>
+        <property>
+          <!-- such property is usually not defined so profile will be always activate -->
+          <name>!workaround.dependabot.5947</name>
+        </property>
+      </activation>
+      <repositories>
+        <repository>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+          <id>ossrh-snapshots</id>
+          <name>ossrh-snapshots</name>
+          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+          <layout>default</layout>
+        </repository>
+      </repositories>
+    </profile>
+
   </profiles>
 </project>
