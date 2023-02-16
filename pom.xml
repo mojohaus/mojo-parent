@@ -248,6 +248,8 @@
     <checkstyle.version>9.3</checkstyle.version>
     <!-- configuration for checkstyle to use with spotless -->
     <checkstyle.spotless.config>config/maven_checks_nocodestyle.xml</checkstyle.spotless.config>
+
+    <invoker.streamLogsOnFailures>true</invoker.streamLogsOnFailures>
   </properties>
 
   <dependencyManagement>
@@ -382,7 +384,7 @@
           <artifactId>maven-invoker-plugin</artifactId>
           <version>${maven-invoker-plugin.version}</version>
           <configuration>
-            <streamLogsOnFailures>true</streamLogsOnFailures>
+            <streamLogsOnFailures>${invoker.streamLogsOnFailures}</streamLogsOnFailures>
           </configuration>
         </plugin>
         <plugin>
