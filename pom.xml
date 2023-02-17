@@ -185,7 +185,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <mojo.java.target>1.8</mojo.java.target>
+    <mojo.java.target>8</mojo.java.target>
     <maven.compiler.source>${mojo.java.target}</maven.compiler.source>
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
 
@@ -713,6 +713,16 @@
   </build>
 
   <profiles>
+    <profile>
+      <id>java9+</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <maven.compiler.release>${mojo.java.target}</maven.compiler.release>
+      </properties>
+    </profile>
+
     <profile>
       <id>mojo-release</id>
       <build>
