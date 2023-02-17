@@ -43,13 +43,32 @@ with options:
    - other imports
    - static import
 
-In order to use `spotless` in your project, you should add to your pom.xml `build/plugins`:
+In order to use `spotless` in your project, you should add to your pom.xml
+
+Newer version of spotless requires JDK 11, so it must be add in profile unless your project requires 11 by default. 
 
 ```xml
-<plugin>
-  <groupId>com.diffplug.spotless</groupId>
-  <artifactId>spotless-maven-plugin</artifactId>
-</plugin>
+<profiles>
+   <profile>
+      <id>java11+</id>
+      <activation>
+         <jdk>[11,)</jdk>
+      </activation>
+
+      <properties>
+         <recommendedJavaBuildVersion>11</recommendedJavaBuildVersion>
+      </properties>
+
+      <build>
+         <plugins>
+            <plugin>
+               <groupId>com.diffplug.spotless</groupId>
+               <artifactId>spotless-maven-plugin</artifactId>
+            </plugin>
+         </plugins>
+      </build>
+   </profile>
+</profiles>
 ```
 
 When `spotless` will be enabled, each build will be check according to correct code format.

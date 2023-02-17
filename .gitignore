@@ -265,5 +265,5 @@ target/
 ### Takari Maven Wrapper ###
 /mvnw.bat
 /mvnw
-/.mvn/
+.mvn/wrapper
 
