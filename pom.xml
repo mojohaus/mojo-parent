@@ -190,6 +190,8 @@
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
 
     <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
+    <recommendedJavaBuildVersion>${minimalJavaBuildVersion}</recommendedJavaBuildVersion>
+
     <minimalMavenBuildVersion>3.2.5</minimalMavenBuildVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -652,6 +654,11 @@
                 <requireJavaVersion>
                   <version>${minimalJavaBuildVersion}</version>
                 </requireJavaVersion>
+                <requireJavaVersion>
+                  <version>${recommendedJavaBuildVersion}</version>
+                  <level>WARN</level>
+                  <message>Recommended Java version for build should be at least ${recommendedJavaBuildVersion}</message>
+                </requireJavaVersion>
                 <requireProperty>
                   <property>project.scm.connection</property>
                   <!-- because Maven adds the artifactId to the SCM-Url automatically for modules in a multimodule project,
@@ -672,12 +679,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>com.diffplug.spotless</groupId>
-        <artifactId>spotless-maven-plugin</artifactId>
-        <!-- only in parent, other projects must enable it by itself -->
-        <inherited>false</inherited>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -716,13 +717,25 @@
 
   <profiles>
     <profile>
-      <id>java9+</id>
+      <id>java11+</id>
       <activation>
-        <jdk>[9,)</jdk>
+        <jdk>[11,)</jdk>
       </activation>
+
       <properties>
         <maven.compiler.release>${mojo.java.target}</maven.compiler.release>
       </properties>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-maven-plugin</artifactId>
+            <!-- only in parent, other projects must enable it by itself -->
+            <inherited>false</inherited>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
 
     <profile>
