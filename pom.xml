@@ -201,7 +201,7 @@
     <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
     <animal-sniffer-maven-plugin.version>1.22</animal-sniffer-maven-plugin.version>
-    <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
+    <flatten-maven-plugin.version>1.4.0</flatten-maven-plugin.version>
     <l10n-maven-plugin.version>1.0.0</l10n-maven-plugin.version>
     <license-maven-plugin.version>1.9</license-maven-plugin.version>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
