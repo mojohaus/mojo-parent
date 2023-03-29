@@ -118,6 +118,11 @@
       <organization>MojoHaus</organization>
       <organizationUrl>https://github.com/mojohaus</organizationUrl>
     </developer>
+    <developer>
+      <id>slachiewicz</id>
+      <name>Sylwester Lachiewicz</name>
+      <url>https://github.com/slachiewicz</url>
+    </developer>
   </developers>
 
   <mailingLists>
