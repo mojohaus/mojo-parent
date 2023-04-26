@@ -251,7 +251,7 @@
     <project.build.outputTimestamp>2023-03-18T13:18:38Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
-    <junit5.version>5.9.2</junit5.version>
+    <junit5.version>5.9.3</junit5.version>
     <!-- 10.x requires Java 11 -->
     <checkstyle.version>9.3</checkstyle.version>
     <!-- configuration for checkstyle to use with spotless -->
