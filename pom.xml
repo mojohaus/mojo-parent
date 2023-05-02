@@ -197,7 +197,7 @@
     <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
     <recommendedJavaBuildVersion>${minimalJavaBuildVersion}</recommendedJavaBuildVersion>
 
-    <maven.version>3.2.5</maven.version>
+    <maven.version>3.5.4</maven.version>
     <minimalMavenBuildVersion>${maven.version}</minimalMavenBuildVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
