@@ -245,7 +245,7 @@
     <modello-maven-plugin.version>2.1.1</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
-    <versions-maven-plugin.version>2.15.0</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.16.0</versions-maven-plugin.version>
     <sisu-maven-plugin.version>0.9.0.M2</sisu-maven-plugin.version>
     <spotless-maven-plugin.version>2.37.0</spotless-maven-plugin.version>
     <project.build.outputTimestamp>2023-06-06T08:44:56Z</project.build.outputTimestamp>
