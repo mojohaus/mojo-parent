@@ -242,7 +242,7 @@
     <maven-wrapper-plugin.version>3.2.0</maven-wrapper-plugin.version>
 
     <mrm-maven-plugin.version>1.5.0</mrm-maven-plugin.version>
-    <modello-maven-plugin.version>2.1.1</modello-maven-plugin.version>
+    <modello-maven-plugin.version>2.1.2</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.1.1</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.15.0</versions-maven-plugin.version>
