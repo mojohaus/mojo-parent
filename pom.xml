@@ -22,7 +22,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>76</version>
+  <version>77-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -161,7 +161,7 @@
   <scm>
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent.git</developerConnection>
-    <tag>76</tag>
+    <tag>74</tag>
     <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
   </scm>
   <issueManagement>
@@ -249,7 +249,7 @@
     <versions-maven-plugin.version>2.16.0</versions-maven-plugin.version>
     <sisu-maven-plugin.version>0.9.0.M2</sisu-maven-plugin.version>
     <spotless-maven-plugin.version>2.37.0</spotless-maven-plugin.version>
-    <project.build.outputTimestamp>2023-07-02T09:23:22Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2023-07-02T09:23:49Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
     <junit5.version>5.9.3</junit5.version>
@@ -330,7 +330,7 @@
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>mojo-parent</artifactId>
-              <version>76</version>
+              <version>77-SNAPSHOT</version>
               <classifier>config</classifier>
             </dependency>
             <dependency>
