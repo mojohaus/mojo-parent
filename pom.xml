@@ -601,10 +601,7 @@
             <java>
               <!-- orders of used formatters are important -->
               <!-- eg. palantir override importOrder, so should be first -->
-              <palantirJavaFormat>
-                <!-- can be removed after fix https://github.com/diffplug/spotless/issues/1774 -->
-                <version>2.38.0</version>
-              </palantirJavaFormat>
+              <palantirJavaFormat />
               <removeUnusedImports />
               <importOrder>
                 <order>javax,java,,\#</order>
