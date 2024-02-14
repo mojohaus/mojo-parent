@@ -140,22 +140,6 @@
       <post>mailto:users@maven.apache.org</post>
       <archive>https://lists.apache.org/list.html?users@maven.apache.org</archive>
     </mailingList>
-    <mailingList>
-      <name>Former (pre-2015-06) Development List</name>
-      <archive>https://markmail.org/list/org.codehaus.mojo.dev</archive>
-    </mailingList>
-    <mailingList>
-      <name>Former (pre-2015-06) User List</name>
-      <archive>https://markmail.org/list/org.codehaus.mojo.user</archive>
-    </mailingList>
-    <mailingList>
-      <name>Former (pre-2015-06) Commits List</name>
-      <archive>https://markmail.org/list/org.codehaus.mojo.scm</archive>
-    </mailingList>
-    <mailingList>
-      <name>Former (pre-2015-06) Announcements List</name>
-      <archive>https://markmail.org/list/org.codehaus.mojo.announce</archive>
-    </mailingList>
   </mailingLists>
 
   <scm>
