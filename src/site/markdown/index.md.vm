@@ -71,19 +71,6 @@ Checkstyle can be enabled by adding to build/plugins`:
 </plugin>
 ```
 
-When you want to use `checkstyle` together with `spotless`, please add:
-
-```xml
-<plugin>
-   <groupId>org.apache.maven.plugins</groupId>
-   <artifactId>maven-checkstyle-plugin</artifactId>
-   <configuration>
-      <configLocation>${checkstyle.spotless.config}</configLocation>
-   </configuration>
-</plugin>
-```
-
-
 Big code reformat
 -----------------
 
