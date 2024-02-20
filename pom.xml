@@ -734,7 +734,7 @@
     <profile>
       <id>jdk8</id>
       <activation>
-        <jdk>[1.8,]</jdk>
+        <jdk>[1.8,11)</jdk>
       </activation>
       <properties>
         <!-- last version working with java 8 -->
