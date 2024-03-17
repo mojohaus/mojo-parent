@@ -596,6 +596,12 @@
                 <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
               </sortPom>
             </pom>
+            <markdown>
+              <includes>
+                <include>**/*.md</include>
+              </includes>
+              <flexmark />
+            </markdown>
             <upToDateChecking>
               <enabled>true</enabled>
             </upToDateChecking>
