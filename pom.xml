@@ -600,6 +600,9 @@
               <includes>
                 <include>**/*.md</include>
               </includes>
+              <excludes>
+                <excludes>target/**</excludes>
+              </excludes>
               <flexmark />
             </markdown>
             <upToDateChecking>
