@@ -230,7 +230,7 @@
     <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
-    <sisu-maven-plugin.version>0.9.0.M2</sisu-maven-plugin.version>
+    <sisu-maven-plugin.version>0.9.0.M3</sisu-maven-plugin.version>
     <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
     <project.build.outputTimestamp>2024-05-13T17:36:03Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
