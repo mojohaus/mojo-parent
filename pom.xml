@@ -205,7 +205,7 @@
     <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
     <maven-fluido-skin.version>1.11.1</maven-fluido-skin.version>
     <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
-    <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
+    <maven-help-plugin.version>3.4.1</maven-help-plugin.version>
     <maven-install-plugin.version>3.1.2</maven-install-plugin.version>
     <maven-invoker-plugin.version>3.7.0</maven-invoker-plugin.version>
     <maven-jar-plugin.version>3.4.1</maven-jar-plugin.version>
