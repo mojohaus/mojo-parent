@@ -43,10 +43,10 @@ jobs:
       - name: Build with Maven
         run: mvn -e -B -V verify site
 
-  deploy:
-    name: Deploy
-    needs: build
-    uses: mojohaus/.github/.github/workflows/maven-deploy.yml@master
-    secrets: inherit
+#  deploy:
+#    name: Deploy
+#    needs: build
+#    uses: mojohaus/.github/.github/workflows/maven-deploy.yml@master
+#    secrets: inherit
 
 
