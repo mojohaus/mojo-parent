@@ -3,14 +3,14 @@ Parent POM for all MojoHaus hosted Apache Maven plugins and components.
 Latest build status: [![GitHub CI](https://github.com/mojohaus/mojo-parent/actions/workflows/maven.yml/badge.svg)](https://github.com/mojohaus/mojo-parent/actions/workflows/maven.yml)
 
 Changelog
----------
+=========
 
 [GitHub report](https://github.com/mojohaus/mojo-parent/releases/tag/${project.scm.tag})
 
 How to use the POM
-------------------
+==================
 
-* for general information about using a parent pom take a look at http://maven.apache.org/guides/introduction/introduction-to-the-pom.html.
+* for general information about using a parent pom take a look at https://maven.apache.org/guides/introduction/introduction-to-the-pom.html.
 * it boils down to define a parent element in your own POM:
 
 ```xml
@@ -31,7 +31,7 @@ How to use the POM
 ```
 
 Spotless - automatic code formatting
-------------------------------------
+====================================
 
 `MojoHaus` Parent POM contains configuration for [spotless-maven-plugin](https://github.com/diffplug/spotless/tree/main/plugin-maven)
 with options:
@@ -58,7 +58,7 @@ mvn spotless:apply
 ```
 
 Checkstyle
-----------
+==========
 
 You can use `checkstyle` in order to verify code on each build.
 
@@ -72,7 +72,7 @@ Checkstyle can be enabled by adding to build/plugins`:
 ```
 
 Big code reformat
------------------
+=================
 
 After applying bigger reformatting it is recommended to add or update a `.git-blame-ignore-revs` file 
 in the root of the repository containing a line with the SHA1 of the formatting commit to ignore those changes 
@@ -83,12 +83,12 @@ and can optionally be considered with [local `git blame`](https://git-scm.com/do
 
 
 Latest releases
----------------
+===============
 
 ... may be found at [Maven Central](https://search.maven.org/search?q=g%3Aorg.codehaus.mojo%20AND%20a%3Amojo-parent%20AND%20p%3Apom).
 
 Deploy site to github
----------------------
+=====================
 
 To deploy a site to github using [maven-scm-publish-plugin](https://maven.apache.org/plugins/maven-scm-publish-plugin/):
 
