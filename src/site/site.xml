@@ -16,15 +16,14 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
-  <bannerLeft>
-    <name>MojoHaus</name>
-    <src>https://www.mojohaus.org/images/mojo_logo.png</src>
-    <href>https://www.mojohaus.org/</href>
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
+
+  <bannerLeft name="MojoHaus" href="https://www.mojohaus.org/">
+    <image src="https://www.mojohaus.org/images/mojo_logo.png" />
   </bannerLeft>
 
-  <publishDate format="yyyy-MM-dd" position="right" />
+  <publishDate position="right" />
   <version position="right" />
 
   <skin>
@@ -40,9 +39,9 @@
       <siteId>18</siteId>
       <url>https://analytics.apache.org/</url>
       <options>
-        <disableCookies/>
-        <trackPageView/>
-        <enableLinkTracking/>
+        <disableCookies />
+        <trackPageView />
+        <enableLinkTracking />
       </options>
     </matomo>
     <fluidoSkin>
@@ -56,13 +55,14 @@
 
   <body>
     <links>
-      <item name="Maven" href="https://maven.apache.org/"/>
+      <item name="Maven" href="https://maven.apache.org/" />
     </links>
+
     <breadcrumbs>
-      <item name="MojoHaus" href="https://www.mojohaus.org/"/>
+      <item name="MojoHaus" href="https://www.mojohaus.org/" />
       <item name="${this.name}" href="${this.url}" />
     </breadcrumbs>
 
     <menu ref="reports" inherit="bottom" />
   </body>
-</project>
+</site>
