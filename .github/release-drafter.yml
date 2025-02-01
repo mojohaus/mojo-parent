@@ -1,1 +1,3 @@
 _extends: .github
+# mojo-parent uses a single version number, no semantic versioning
+version-template: '$MAJOR'
