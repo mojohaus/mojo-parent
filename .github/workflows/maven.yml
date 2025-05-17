@@ -27,7 +27,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        jdk: [ 8, 21 ]
+        jdk: [ 11, 21 ]
 
     steps:
       - name: Checkout

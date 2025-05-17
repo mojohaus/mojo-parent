@@ -159,12 +159,12 @@
 
   <distributionManagement>
     <repository>
-      <id>ossrh-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      <id>sonatype-cp</id>
+      <url>https://blablabla.not-exists.com</url>
     </repository>
     <snapshotRepository>
-      <id>ossrh-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <id>sonatype-cp</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
     </snapshotRepository>
     <site>
       <id>github</id>
@@ -179,7 +179,7 @@
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
-    <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
+    <minimalJavaBuildVersion>11</minimalJavaBuildVersion>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <mavenVersion>${minimalMavenBuildVersion}</mavenVersion>
 
@@ -750,6 +750,13 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>eu.maveniverse.maven.njord</groupId>
+        <artifactId>extension</artifactId>
+        <version>0.5.2</version>
+      </extension>
+    </extensions>
   </build>
 
   <profiles>
