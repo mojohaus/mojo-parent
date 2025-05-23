@@ -179,7 +179,7 @@
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
-    <minimalJavaBuildVersion>11</minimalJavaBuildVersion>
+    <minimalJavaBuildVersion>8</minimalJavaBuildVersion>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <mavenVersion>${minimalMavenBuildVersion}</mavenVersion>
 
@@ -226,7 +226,7 @@
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <maven-wrapper-plugin.version>3.3.2</maven-wrapper-plugin.version>
     <njord.autoPublish>true</njord.autoPublish>
-    <njord.version>0.5.5</njord.version>
+    <njord.version>0.6.0</njord.version>
     <mrm-maven-plugin.version>1.6.0</mrm-maven-plugin.version>
     <modello-maven-plugin.version>2.4.0</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
