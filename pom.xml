@@ -180,8 +180,8 @@
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
     <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
-    <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
-    <mavenVersion>${minimalMavenBuildVersion}</mavenVersion>
+    <minimalMavenBuildVersion>3.9.0</minimalMavenBuildVersion>
+    <mavenVersion>3.6.3</mavenVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
