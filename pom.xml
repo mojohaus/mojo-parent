@@ -179,7 +179,7 @@
     <maven.compiler.target>${mojo.java.target}</maven.compiler.target>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
-    <minimalJavaBuildVersion>8</minimalJavaBuildVersion>
+    <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <mavenVersion>${minimalMavenBuildVersion}</mavenVersion>
 
