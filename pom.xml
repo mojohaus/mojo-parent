@@ -228,7 +228,7 @@
     <njord.autoPublish>true</njord.autoPublish>
     <njord.version>0.6.1</njord.version>
     <mrm-maven-plugin.version>1.6.0</mrm-maven-plugin.version>
-    <modello-maven-plugin.version>2.4.0</modello-maven-plugin.version>
+    <modello-maven-plugin.version>2.5.0</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.2.1</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
