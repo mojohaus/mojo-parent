@@ -233,7 +233,7 @@
     <taglist-maven-plugin.version>3.2.1</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
     <sisu-maven-plugin.version>0.9.0.M4</sisu-maven-plugin.version>
-    <spotless-maven-plugin.version>2.44.4</spotless-maven-plugin.version>
+    <spotless-maven-plugin.version>2.44.5</spotless-maven-plugin.version>
     <project.build.outputTimestamp>2025-05-27T06:15:28Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
