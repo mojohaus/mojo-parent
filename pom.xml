@@ -159,11 +159,13 @@
 
   <distributionManagement>
     <repository>
-      <id>sonatype-cp</id>
+      <id>sonatype-central-portal</id>
+      <name>Sonatype Central Portal</name>
       <url>https://repo.maven.apache.org/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>sonatype-cp</id>
+      <id>sonatype-central-portal</id>
+      <name>Sonatype Central Snapshots</name>
       <url>https://central.sonatype.com/repository/maven-snapshots</url>
     </snapshotRepository>
     <site>
@@ -667,7 +669,7 @@
                   <banPluginRepositories>true</banPluginRepositories>
                   <allowSnapshotRepositories>true</allowSnapshotRepositories>
                   <allowedPluginRepositories>
-                    <allowedPluginRepository>ossrh-snapshots</allowedPluginRepository>
+                    <allowedPluginRepository>sonatype-central-portal</allowedPluginRepository>
                     <allowedPluginRepository>apache.snapshots</allowedPluginRepository>
                   </allowedPluginRepositories>
                 </requireNoRepositories>
