@@ -246,7 +246,7 @@
 
     <!-- njord configuration -->
     <njord.autoPublish>true</njord.autoPublish>
-    <jord.publishingType>automatic</jord.publishingType>
+    <njord.publishingType>automatic</njord.publishingType>
     <njord.waitForStates>true</njord.waitForStates>
     <njord.enabled>false</njord.enabled>
   </properties>
