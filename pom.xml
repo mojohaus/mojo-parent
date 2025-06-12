@@ -227,7 +227,7 @@
     <maven-surefire-report-plugin.version>3.5.3</maven-surefire-report-plugin.version>
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <maven-wrapper-plugin.version>3.3.2</maven-wrapper-plugin.version>
-    <njord.version>0.7.1</njord.version>
+    <njord.version>0.7.5</njord.version>
     <mrm-maven-plugin.version>1.6.0</mrm-maven-plugin.version>
     <modello-maven-plugin.version>2.5.0</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
