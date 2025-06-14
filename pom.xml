@@ -249,6 +249,8 @@
 
     <invoker.streamLogsOnFailures>true</invoker.streamLogsOnFailures>
 
+    <spotless.action>apply</spotless.action>
+
     <!-- njord configuration -->
     <njord.autoPublish>true</njord.autoPublish>
     <njord.publishingType>automatic</njord.publishingType>
@@ -647,7 +649,7 @@
             <execution>
               <id>spotless-check</id>
               <goals>
-                <goal>check</goal>
+                <goal>${spotless.action}</goal>
               </goals>
               <phase>process-sources</phase>
             </execution>
@@ -783,7 +785,17 @@
         </plugins>
       </build>
     </profile>
-
+    <profile>
+      <id>format-check</id>
+      <activation>
+        <property>
+          <name>env.CI</name>
+        </property>
+      </activation>
+      <properties>
+        <spotless.action>check</spotless.action>
+      </properties>
+    </profile>
     <profile>
       <id>mojo-release</id>
       <properties>
