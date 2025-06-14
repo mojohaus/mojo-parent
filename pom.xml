@@ -22,7 +22,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>mojo-parent</artifactId>
-  <version>92-SNAPSHOT</version>
+  <version>92</version>
   <packaging>pom</packaging>
 
   <name>MojoHaus Parent</name>
@@ -145,7 +145,7 @@
   <scm>
     <connection>scm:git:https://github.com/mojohaus/mojo-parent.git</connection>
     <developerConnection>scm:git:https://github.com/mojohaus/mojo-parent.git</developerConnection>
-    <tag>74</tag>
+    <tag>92</tag>
     <url>https://github.com/mojohaus/mojo-parent/tree/${project.scm.tag}</url>
   </scm>
   <issueManagement>
@@ -238,7 +238,7 @@
     <spotless-maven-plugin.version>2.44.5</spotless-maven-plugin.version>
     <!-- we use version 2.56.0 due to: https://github.com/palantir/palantir-java-format/issues/1320 -->
     <palantirJavaFormat.version>2.56.0</palantirJavaFormat.version>
-    <project.build.outputTimestamp>2025-06-02T19:00:39Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-06-14T09:00:05Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
     <junit5.version>5.13.1</junit5.version>
@@ -332,7 +332,7 @@
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>mojo-parent</artifactId>
-              <version>92-SNAPSHOT</version>
+              <version>92</version>
               <classifier>config</classifier>
             </dependency>
             <dependency>
