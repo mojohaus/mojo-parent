@@ -205,7 +205,7 @@
     <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
     <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
     <maven-ear-plugin.version>3.4.0</maven-ear-plugin.version>
-    <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
+    <maven-enforcer-plugin.version>3.6.0</maven-enforcer-plugin.version>
     <maven-failsafe-plugin.version>3.5.3</maven-failsafe-plugin.version>
     <maven-fluido-skin.version>2.1.0</maven-fluido-skin.version>
     <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
