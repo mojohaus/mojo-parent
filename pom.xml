@@ -236,6 +236,7 @@
     <versions-maven-plugin.version>2.20.1</versions-maven-plugin.version>
     <sisu-maven-plugin.version>0.9.0.M4</sisu-maven-plugin.version>
     <spotless-maven-plugin.version>3.1.0</spotless-maven-plugin.version>
+    <palantirJavaFormat.version>2.83.0</palantirJavaFormat.version>
     <project.build.outputTimestamp>2025-10-03T15:39:42Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
@@ -613,7 +614,10 @@
             <java>
               <!-- orders of used formatters are important -->
               <!-- eg. palantir override importOrder, so should be first -->
-              <palantirJavaFormat />
+              <palantirJavaFormat>
+                <!-- Declare version so that spotless does not choose a version based on JDK version -->
+                <version>${palantirJavaFormat.version}</version>
+              </palantirJavaFormat>
               <removeUnusedImports />
               <importOrder>
                 <order>javax,java,,\#</order>
@@ -938,6 +942,19 @@
           </plugin>
         </plugins>
       </reporting>
+    </profile>
+    <profile>
+      <!-- a profile to allow dependabot to manage palantir-java-format version -->
+      <id>palantir-javaformat-dependabot</id>
+      <dependencyManagement>
+        <dependencies>
+          <dependency>
+            <groupId>com.palantir.javaformat</groupId>
+            <artifactId>palantir-java-format</artifactId>
+            <version>${palantirJavaFormat.version}</version>
+          </dependency>
+        </dependencies>
+      </dependencyManagement>
     </profile>
   </profiles>
 </project>
