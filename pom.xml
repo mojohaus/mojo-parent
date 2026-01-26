@@ -230,7 +230,7 @@
     <maven-wrapper-plugin.version>3.3.4</maven-wrapper-plugin.version>
     <njord.version>0.9.1</njord.version>
     <mrm-maven-plugin.version>1.7.0</mrm-maven-plugin.version>
-    <modello-maven-plugin.version>2.5.1</modello-maven-plugin.version>
+    <modello-maven-plugin.version>2.6.0</modello-maven-plugin.version>
     <plexus-component-metadata.version>2.2.0</plexus-component-metadata.version>
     <taglist-maven-plugin.version>3.2.2</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.20.1</versions-maven-plugin.version>
