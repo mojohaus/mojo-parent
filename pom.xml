@@ -235,7 +235,7 @@
     <taglist-maven-plugin.version>3.2.2</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
     <sisu-maven-plugin.version>1.0.0</sisu-maven-plugin.version>
-    <spotless-maven-plugin.version>3.3.0</spotless-maven-plugin.version>
+    <spotless-maven-plugin.version>3.4.0</spotless-maven-plugin.version>
     <palantirJavaFormat.version>2.89.0</palantirJavaFormat.version>
     <project.build.outputTimestamp>2026-03-14T13:54:36Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
