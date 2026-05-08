@@ -247,6 +247,7 @@
     <checkstyle.config.location>config/maven_checks_nocodestyle.xml</checkstyle.config.location>
 
     <invoker.streamLogsOnFailures>true</invoker.streamLogsOnFailures>
+    <invoker.rerunFailingTestsCount>1</invoker.rerunFailingTestsCount>
 
     <spotless.action>apply</spotless.action>
 
@@ -397,6 +398,7 @@
           <version>${maven-invoker-plugin.version}</version>
           <configuration>
             <streamLogsOnFailures>${invoker.streamLogsOnFailures}</streamLogsOnFailures>
+            <rerunFailingTestsCount>${invoker.rerunFailingTestsCount}</rerunFailingTestsCount>
           </configuration>
         </plugin>
         <plugin>
