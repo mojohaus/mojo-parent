@@ -10,6 +10,9 @@ updates:
       # Checkstyle >=10 requires Java 11+
       - dependency-name: "com.puppycrawl.tools:checkstyle"
         versions: [">= 10.0"]
+      # mrm 2.x requires Java 17+; the parent builds with Java 8
+      - dependency-name: "org.codehaus.mojo:mrm-maven-plugin"
+        versions: [">= 2.0.0"]
     open-pull-requests-limit: 10
   - package-ecosystem: "github-actions"
     directory: "/"
