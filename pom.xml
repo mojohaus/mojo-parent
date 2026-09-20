@@ -183,7 +183,8 @@
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
     <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
-    <minimalMavenBuildVersion>${mavenVersion}</minimalMavenBuildVersion>
+    <!-- the Maven needed to build, as in the Apache parent; kept apart from mavenVersion, the API a plugin compiles against -->
+    <minimalMavenBuildVersion>3.9</minimalMavenBuildVersion>
     <mavenVersion>3.6.3</mavenVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -800,9 +801,6 @@
     <profile>
       <id>mojo-release</id>
       <properties>
-        <!-- due to m-deploy-p 3.x we need use Maven 3.9.x at least -->
-        <!-- https://issues.apache.org/jira/browse/MNG-7055 -->
-        <minimalMavenBuildVersion>3.9.0</minimalMavenBuildVersion>
         <!-- use njord during release -->
         <njord.enabled>true</njord.enabled>
       </properties>
