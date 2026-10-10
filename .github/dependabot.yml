@@ -3,7 +3,10 @@ updates:
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
+    groups:
+      maven:
+        update-types: ["minor", "patch"]
     ignore:
       # Ignore Maven Core updates
       - dependency-name: "org.apache.maven:*"
@@ -20,4 +23,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns: ["*"]
