@@ -6,6 +6,7 @@ updates:
       interval: "monthly"
     groups:
       maven:
+        patterns: ["*"]
         update-types: ["minor", "patch"]
     ignore:
       # Ignore Maven Core updates
