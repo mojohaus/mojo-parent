@@ -9,8 +9,9 @@ updates:
         patterns: ["*"]
         update-types: ["minor", "patch"]
     ignore:
-      # Ignore Maven Core updates
-      - dependency-name: "org.apache.maven:*"
+      # Stay on Maven 3.9.x for the managed Maven API
+      - dependency-name: "org.apache.maven:maven-plugin-api"
+        versions: [">= 3.10.0"]
       # Checkstyle >=10 requires Java 11+
       - dependency-name: "com.puppycrawl.tools:checkstyle"
         versions: [">= 10.0"]
