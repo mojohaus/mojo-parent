@@ -185,7 +185,7 @@
     <minimalJavaBuildVersion>${mojo.java.target}</minimalJavaBuildVersion>
     <!-- the Maven needed to build, as in the Apache parent; kept apart from mavenVersion, the API a plugin compiles against -->
     <minimalMavenBuildVersion>3.9</minimalMavenBuildVersion>
-    <mavenVersion>3.6.3</mavenVersion>
+    <mavenVersion>3.9.0</mavenVersion>
 
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- NOTE: We deliberately do not set maven.test.redirectTestOutputToFile here to workaround MNG-1992 -->
