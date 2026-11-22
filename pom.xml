@@ -631,7 +631,8 @@
                 <include>**/*.md</include>
               </includes>
               <excludes>
-                <excludes>target/**</excludes>
+                <exclude>**/target/**</exclude>
+                <exclude>**/src/site/markdown/**</exclude>
               </excludes>
               <flexmark />
             </markdown>
