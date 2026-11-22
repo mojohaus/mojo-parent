@@ -199,7 +199,6 @@
     <license-maven-plugin.version>2.7.1</license-maven-plugin.version>
     <maven-antrun-plugin.version>3.2.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.8.0</maven-assembly-plugin.version>
-    <maven-changes-plugin.version>2.11</maven-changes-plugin.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
@@ -218,7 +217,6 @@
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
     <maven-plugin-plugin.version>3.16.0</maven-plugin-plugin.version>
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
-    <maven-pmd-plugin.version>3.19.0</maven-pmd-plugin.version>
     <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
     <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
     <maven-scm-publish-plugin.version>3.3.0</maven-scm-publish-plugin.version>
