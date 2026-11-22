@@ -212,6 +212,7 @@
     <maven-help-plugin.version>3.5.2</maven-help-plugin.version>
     <maven-install-plugin.version>3.2.0</maven-install-plugin.version>
     <maven-invoker-plugin.version>3.10.1</maven-invoker-plugin.version>
+    <groovy.version>4.0.33</groovy.version>
     <maven-jar-plugin.version>3.5.1</maven-jar-plugin.version>
     <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
@@ -396,6 +397,24 @@
             <streamLogsOnFailures>${invoker.streamLogsOnFailures}</streamLogsOnFailures>
             <rerunFailingTestsCount>${invoker.rerunFailingTestsCount}</rerunFailingTestsCount>
           </configuration>
+          <dependencies>
+            <!-- Groovy 4.0.31, the version of invoker 3.10.1, fails on JDK 27 (class file version 71) -->
+            <dependency>
+              <groupId>org.apache.groovy</groupId>
+              <artifactId>groovy</artifactId>
+              <version>${groovy.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.groovy</groupId>
+              <artifactId>groovy-json</artifactId>
+              <version>${groovy.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.groovy</groupId>
+              <artifactId>groovy-xml</artifactId>
+              <version>${groovy.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
