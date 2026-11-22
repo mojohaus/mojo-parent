@@ -73,10 +73,11 @@ Profiles
 |             Profile              |                  Active                   |                                                           Effect                                                           |
 |----------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | `java17+`                        | on JDK 17 and later                       | Runs Spotless, whose formatters need JDK 17.                                                                               |
+| `java17`                         | on JDK 17 to 20                           | Formats Java with palantir-java-format, since open-java-format needs JDK 21.                                               |
 | `format-check`                   | when the `CI` environment variable is set | Makes Spotless check the formatting instead of fixing it.                                                                  |
 | `mojo-release`                   | on request                                | Used for a release: publishes through Njord, and attaches the source release, the sources, the Javadoc and the signatures. |
 | `reporting`                      | unless `-DskipReports=true`               | Adds the Javadoc, plugin and project information reports to the site.                                                      |
-| `palantir-javaformat-dependabot` | on request                                | Only lets Dependabot see the version of the Palantir formatter.                                                            |
+| `java-format-dependabot`         | on request                                | Only lets Dependabot see the versions of the Java formatters.                                                              |
 
 Spotless - automatic code formatting
 ====================================
@@ -84,7 +85,9 @@ Spotless - automatic code formatting
 `MojoHaus` Parent POM contains configuration for [spotless-maven-plugin](https://github.com/diffplug/spotless/tree/main/plugin-maven)
 with options:
 
-- [palantir](https://github.com/palantir/palantir-java-format) code formatter
+- [open-java-format](https://github.com/openjavaformat/open-java-format) code formatter, the palantir-java-format code that
+  also runs on JDK 25 and later, with the same output; it needs JDK 21, so on JDK 17 to 20 palantir-java-format
+  formats instead. The properties `javaFormat.groupArtifact` and `javaFormat.version` select the formatter
 - imports order as:
   - javax
   - java

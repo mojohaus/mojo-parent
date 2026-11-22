@@ -234,8 +234,12 @@
     <taglist-maven-plugin.version>3.2.3</taglist-maven-plugin.version>
     <versions-maven-plugin.version>2.23.0</versions-maven-plugin.version>
     <sisu-maven-plugin.version>1.1.1</sisu-maven-plugin.version>
-    <spotless-maven-plugin.version>3.10.4</spotless-maven-plugin.version>
+    <spotless-maven-plugin.version>3.12.0</spotless-maven-plugin.version>
     <palantirJavaFormat.version>2.103.0</palantirJavaFormat.version>
+    <openJavaFormat.version>21.0.2</openJavaFormat.version>
+    <!-- Java formatter of spotless: open-java-format, or palantir-java-format on JDK 17 to 20 (profile java17) -->
+    <javaFormat.groupArtifact>dev.openjavaformat:open-java-format</javaFormat.groupArtifact>
+    <javaFormat.version>${openJavaFormat.version}</javaFormat.version>
     <project.build.outputTimestamp>2026-07-20T17:55:20Z</project.build.outputTimestamp>
     <!-- mono-module doesn't require site:stage for scm-publish -->
     <scmpublish.content>${project.reporting.outputDirectory}</scmpublish.content>
@@ -611,8 +615,10 @@
               <!-- orders of used formatters are important -->
               <!-- eg. palantir override importOrder, so should be first -->
               <palantirJavaFormat>
-                <!-- Declare version so that spotless does not choose a version based on JDK version -->
-                <version>${palantirJavaFormat.version}</version>
+                <!-- open-java-format: the palantir-java-format code under the same packages, which also runs on
+                     JDK 25 and later; declare the version so that spotless does not choose one based on the JDK -->
+                <groupArtifact>${javaFormat.groupArtifact}</groupArtifact>
+                <version>${javaFormat.version}</version>
               </palantirJavaFormat>
               <removeUnusedImports />
               <importOrder>
@@ -780,6 +786,17 @@
       </build>
     </profile>
     <profile>
+      <!-- open-java-format needs JDK 21; palantir-java-format formats the same way on JDK 17 -->
+      <id>java17</id>
+      <activation>
+        <jdk>[17,21)</jdk>
+      </activation>
+      <properties>
+        <javaFormat.groupArtifact>com.palantir.javaformat:palantir-java-format</javaFormat.groupArtifact>
+        <javaFormat.version>${palantirJavaFormat.version}</javaFormat.version>
+      </properties>
+    </profile>
+    <profile>
       <id>format-check</id>
       <activation>
         <property>
@@ -938,14 +955,19 @@
       </reporting>
     </profile>
     <profile>
-      <!-- a profile to allow dependabot to manage palantir-java-format version -->
-      <id>palantir-javaformat-dependabot</id>
+      <!-- a profile to allow dependabot to manage the Java formatter versions -->
+      <id>java-format-dependabot</id>
       <dependencyManagement>
         <dependencies>
           <dependency>
             <groupId>com.palantir.javaformat</groupId>
             <artifactId>palantir-java-format</artifactId>
             <version>${palantirJavaFormat.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>dev.openjavaformat</groupId>
+            <artifactId>open-java-format</artifactId>
+            <version>${openJavaFormat.version}</version>
           </dependency>
         </dependencies>
       </dependencyManagement>
