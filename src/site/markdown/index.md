@@ -95,8 +95,8 @@ with options:
   - static import
 
 `spotless` is active in your project by default on JDK 17 and later, and runs in the `process-sources` phase. It
-fixes the formatting of Java, POM and Markdown files (`**/*.md`) in place, and when the `CI` environment variable
-is set it fails the build instead. If you don't want to use it:
+fixes the formatting of Java and POM files, and of Markdown files (`**/*.md`) outside `src/site/markdown`, in place,
+and when the `CI` environment variable is set it fails the build instead. If you don't want to use it:
 
 ```xml
 <properties>
@@ -110,8 +110,8 @@ is set it fails the build instead. If you don't want to use it:
 mvn spotless:apply
 ```
 
-Keep the metadata of a Markdown page, such as `title:`, without `---` lines: the Markdown formatter turns the
-closing line into an underline, and the page renders empty.
+The site pages in `src/site/markdown` are not formatted, so the metadata of a page, such as `title:`, keeps its
+`---` lines: the Markdown formatter would turn the closing line into an underline, and the page would render empty.
 
 Checkstyle
 ==========

@@ -20,8 +20,8 @@ request. A refactor with no visible effect needs none.
   `src/site/markdown/index.md` (Versions and requirements, Build rules, Profiles, Spotless, Checkstyle). The page is
   plain Markdown; it names no parent or plugin version except the one in the `<parent>` example, written as
   `<version><!-- latest release --></version>`.
-- Metadata at the top of a page (`title:`, `date:`) has no `---` fences: Spotless would turn the closing fence into
-  an underline and the page would render empty.
+- Spotless does not format the pages in `src/site/markdown`, so metadata at the top of a page (`title:`, `date:`)
+  keeps its `---` fences: Spotless would turn the closing fence into an underline and the page would render empty.
 - A page added, removed or renamed: the menu in `src/site/site.xml`. Never rename a published page; its URL is
   linked from elsewhere.
 - The Maven or Java floor, or how to release: `README.md`.
